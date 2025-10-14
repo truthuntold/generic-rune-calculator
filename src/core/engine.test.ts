@@ -1,6 +1,28 @@
 import { describe, it, expect } from 'vitest';
 import { oneInNToNumber, effectiveBaseRps, shouldApplyLuck, etaSeconds } from './engine';
-import { RuneRecord, GameConfig } from '../types';
+
+export type RpsMode = 'raw' | 'derived';
+
+export interface GameConfig {
+  displayName?: string;
+  rpsMode: RpsMode;
+  labels?: Partial<Record<'rps' | 'speed' | 'bulk' | 'luck', string>>;
+  defaults?: Partial<Record<'rps' | 'speed' | 'bulk' | 'luck', string>>;
+  luckRules?: { applyTo?: 'known' | 'all' | 'none' }; // default 'known'
+}
+
+export interface ProbabilityOneInN {
+  type: 'oneInN';
+  n: string | number; // supports huge values, possibly suffixed (e.g., "1Qd")
+}
+
+export interface RuneRecord {
+  id: string;
+  name: string;
+  chance: ProbabilityOneInN;
+  source?: string;     // where to get it
+  tags?: string[];     // e.g., ["secret"], ["noluck"]
+}
 
 const scales = {
   M: 1e6,

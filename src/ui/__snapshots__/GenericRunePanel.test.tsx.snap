@@ -3,205 +3,250 @@
 exports[`GenericRunePanel > matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="container mx-auto p-4"
+    class="bg-gray-100 min-h-screen"
   >
-    <h1
-      class="text-2xl font-bold mb-4"
-    >
-      Raw Test
-    </h1>
     <div
-      class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4"
+      class="container mx-auto p-4 sm:p-6 lg:p-8"
     >
-      <div>
-        <div>
-          <label
-            class="block text-sm font-medium text-gray-700"
-            for="rps"
+      <div
+        class="bg-white rounded-lg shadow-lg p-6"
+      >
+        <h1
+          class="text-3xl font-bold mb-6 text-gray-800"
+        >
+          Raw Test
+        </h1>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6"
+        >
+          <div
+            class="p-4 bg-gray-50 rounded-lg"
           >
-            RPS
-          </label>
-          <input
-            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-            id="rps"
-            type="text"
-            value="10"
-          />
+            <div>
+              <label
+                class="block text-sm font-medium text-gray-700"
+                for="rps"
+              >
+                RPS
+              </label>
+              <input
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                id="rps"
+                type="text"
+                value="10"
+              />
+            </div>
+          </div>
+          <div
+            class="p-4 bg-gray-50 rounded-lg"
+          >
+            <label
+              class="block text-sm font-medium text-gray-700"
+              for="luck"
+            >
+              Luck
+            </label>
+            <input
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              id="luck"
+              type="text"
+              value="1"
+            />
+          </div>
+          <div
+            class="p-4 bg-gray-50 rounded-lg flex items-center justify-center"
+          >
+            <p
+              class="text-lg font-semibold text-gray-800"
+            >
+              Effective RPS: 
+              <span
+                class="text-indigo-600"
+              >
+                10
+              </span>
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-gray-50 rounded-lg p-4 mb-6"
+        >
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
+          >
+            <div
+              class="col-span-1 sm:col-span-2 lg:col-span-1"
+            >
+              <input
+                class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                placeholder="Filter by name"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              class="flex items-center"
+            >
+              <input
+                class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                id="showUnder1Hour"
+                type="checkbox"
+              />
+              <label
+                class="ml-2 block text-sm text-gray-900"
+                for="showUnder1Hour"
+              >
+                Under 1 hour
+              </label>
+            </div>
+            <div
+              class="flex items-center"
+            >
+              <input
+                class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                id="hideInstant"
+                type="checkbox"
+              />
+              <label
+                class="ml-2 block text-sm text-gray-900"
+                for="hideInstant"
+              >
+                Hide Instant
+              </label>
+            </div>
+            <div
+              class="flex items-center"
+            >
+              <input
+                class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                id="showSecretsOnly"
+                type="checkbox"
+              />
+              <label
+                class="ml-2 block text-sm text-gray-900"
+                for="showSecretsOnly"
+              >
+                Secrets only
+              </label>
+            </div>
+          </div>
+        </div>
+        <div
+          class="overflow-x-auto"
+        >
+          <table
+            class="min-w-full divide-y divide-gray-200"
+          >
+            <thead
+              class="bg-gray-50"
+            >
+              <tr>
+                <th
+                  class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  scope="col"
+                >
+                  Name
+                </th>
+                <th
+                  class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  scope="col"
+                >
+                  Chance
+                </th>
+                <th
+                  class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  scope="col"
+                >
+                  ETA
+                </th>
+                <th
+                  class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  scope="col"
+                >
+                  Source
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              class="bg-white divide-y divide-gray-200"
+            >
+              <tr
+                class="hover:bg-gray-50"
+              >
+                <td
+                  class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                >
+                  Rune 1
+                </td>
+                <td
+                  class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                >
+                  1 in 100
+                </td>
+                <td
+                  class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                >
+                  10s
+                </td>
+                <td
+                  class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                >
+                  A
+                </td>
+              </tr>
+              <tr
+                class="hover:bg-gray-50"
+              >
+                <td
+                  class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                >
+                  Rune 2
+                </td>
+                <td
+                  class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                >
+                  1 in 1000
+                </td>
+                <td
+                  class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                >
+                  2m
+                </td>
+                <td
+                  class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                >
+                  B
+                </td>
+              </tr>
+              <tr
+                class="hover:bg-gray-50"
+              >
+                <td
+                  class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                >
+                  Secret Rune
+                </td>
+                <td
+                  class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                >
+                  1 in 10000
+                </td>
+                <td
+                  class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                >
+                  17m
+                </td>
+                <td
+                  class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                >
+                  C
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-      <div>
-        <label
-          class="block text-sm font-medium text-gray-700"
-          for="luck"
-        >
-          Luck
-        </label>
-        <input
-          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          id="luck"
-          type="text"
-          value="1"
-        />
-      </div>
-      <div>
-        <p>
-          Effective RPS: 10
-        </p>
-      </div>
     </div>
-    <div
-      class="flex items-center space-x-4 mb-4"
-    >
-      <input
-        class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-        placeholder="Filter by name"
-        type="text"
-        value=""
-      />
-      <div
-        class="flex items-center"
-      >
-        <input
-          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-          type="checkbox"
-        />
-        <label
-          class="ml-2 block text-sm text-gray-900"
-        >
-          Only under 1 hour
-        </label>
-      </div>
-      <div
-        class="flex items-center"
-      >
-        <input
-          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-          type="checkbox"
-        />
-        <label
-          class="ml-2 block text-sm text-gray-900"
-        >
-          Hide Instant
-        </label>
-      </div>
-      <div
-        class="flex items-center"
-      >
-        <input
-          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-          type="checkbox"
-        />
-        <label
-          class="ml-2 block text-sm text-gray-900"
-        >
-          Secrets only
-        </label>
-      </div>
-    </div>
-    <table
-      class="min-w-full divide-y divide-gray-200"
-    >
-      <thead
-        class="bg-gray-50"
-      >
-        <tr>
-          <th
-            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-            scope="col"
-          >
-            Name
-          </th>
-          <th
-            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-            scope="col"
-          >
-            Chance
-          </th>
-          <th
-            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-            scope="col"
-          >
-            ETA
-          </th>
-          <th
-            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-            scope="col"
-          >
-            Source
-          </th>
-        </tr>
-      </thead>
-      <tbody
-        class="bg-white divide-y divide-gray-200"
-      >
-        <tr>
-          <td
-            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
-          >
-            Rune 1
-          </td>
-          <td
-            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-          >
-            1 in 100
-          </td>
-          <td
-            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-          >
-            10s
-          </td>
-          <td
-            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-          >
-            A
-          </td>
-        </tr>
-        <tr>
-          <td
-            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
-          >
-            Rune 2
-          </td>
-          <td
-            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-          >
-            1 in 1000
-          </td>
-          <td
-            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-          >
-            2m
-          </td>
-          <td
-            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-          >
-            B
-          </td>
-        </tr>
-        <tr>
-          <td
-            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
-          >
-            Secret Rune
-          </td>
-          <td
-            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-          >
-            1 in 10000
-          </td>
-          <td
-            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-          >
-            17m
-          </td>
-          <td
-            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-          >
-            C
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </div>
 </DocumentFragment>
 `;
