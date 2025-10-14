@@ -1,0 +1,76 @@
+[
+  {
+    "id": "common",
+    "name": "Common Rune",
+    "chance": {
+      "type": "oneInN",
+      "n": 100
+    },
+    "source": "Anywhere"
+  },
+  {
+    "id": "uncommon",
+    "name": "Uncommon Rune",
+    "chance": {
+      "type": "oneInN",
+      "n": 1000
+    },
+    "source": "Anywhere"
+  },
+  {
+    "id": "rare",
+    "name": "Rare Rune",
+    "chance": {
+      "type": "oneInN",
+      "n": 10000
+    },
+    "source": "Anywhere"
+  },
+  {
+    "id": "epic",
+    "name": "Epic Rune",
+    "chance": {
+      "type": "oneInN",
+      "n": "100K"
+    },
+    "source": "Dungeons"
+  },
+  {
+    "id": "legendary",
+    "name": "Legendary Rune",
+    "chance": {
+      "type": "oneInN",
+      "n": "1M"
+    },
+    "source": "Bosses"
+  },
+  {
+    "id": "mythic",
+    "name": "Mythic Rune",
+    "chance": {
+      "type": "oneInN",
+      "n": "100M"
+    },
+    "source": "Raids"
+  },
+  {
+    "id": "secret_rune_1",
+    "name": "Secret Rune 1",
+    "chance": {
+      "type": "oneInN",
+      "n": "1B"
+    },
+    "source": "Hidden Location",
+    "tags": ["secret"]
+  },
+  {
+    "id": "secret_rune_2",
+    "name": "Secret Rune 2",
+    "chance": {
+      "type": "oneInN",
+      "n": "1T"
+    },
+    "source": "Hidden Location",
+    "tags": ["secret", "noluck"]
+  }
+]

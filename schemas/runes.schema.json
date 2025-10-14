@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Runes",
+  "type": "array",
+  "items": {
+    "title": "RuneRecord",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "chance": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "oneInN"
+          },
+          "n": {
+            "type": ["string", "number"]
+          }
+        },
+        "required": ["type", "n"],
+        "additionalProperties": false
+      },
+      "source": {
+        "type": "string"
+      },
+      "tags": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": ["id", "name", "chance"],
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,207 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`GenericRunePanel > matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container mx-auto p-4"
+  >
+    <h1
+      class="text-2xl font-bold mb-4"
+    >
+      Raw Test
+    </h1>
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4"
+    >
+      <div>
+        <div>
+          <label
+            class="block text-sm font-medium text-gray-700"
+            for="rps"
+          >
+            RPS
+          </label>
+          <input
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+            id="rps"
+            type="text"
+            value="10"
+          />
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-sm font-medium text-gray-700"
+          for="luck"
+        >
+          Luck
+        </label>
+        <input
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+          id="luck"
+          type="text"
+          value="1"
+        />
+      </div>
+      <div>
+        <p>
+          Effective RPS: 10
+        </p>
+      </div>
+    </div>
+    <div
+      class="flex items-center space-x-4 mb-4"
+    >
+      <input
+        class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+        placeholder="Filter by name"
+        type="text"
+        value=""
+      />
+      <div
+        class="flex items-center"
+      >
+        <input
+          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+          type="checkbox"
+        />
+        <label
+          class="ml-2 block text-sm text-gray-900"
+        >
+          Only under 1 hour
+        </label>
+      </div>
+      <div
+        class="flex items-center"
+      >
+        <input
+          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+          type="checkbox"
+        />
+        <label
+          class="ml-2 block text-sm text-gray-900"
+        >
+          Hide Instant
+        </label>
+      </div>
+      <div
+        class="flex items-center"
+      >
+        <input
+          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+          type="checkbox"
+        />
+        <label
+          class="ml-2 block text-sm text-gray-900"
+        >
+          Secrets only
+        </label>
+      </div>
+    </div>
+    <table
+      class="min-w-full divide-y divide-gray-200"
+    >
+      <thead
+        class="bg-gray-50"
+      >
+        <tr>
+          <th
+            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+            scope="col"
+          >
+            Name
+          </th>
+          <th
+            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+            scope="col"
+          >
+            Chance
+          </th>
+          <th
+            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+            scope="col"
+          >
+            ETA
+          </th>
+          <th
+            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+            scope="col"
+          >
+            Source
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="bg-white divide-y divide-gray-200"
+      >
+        <tr>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+          >
+            Rune 1
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+          >
+            1 in 100
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+          >
+            10s
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+          >
+            A
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+          >
+            Rune 2
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+          >
+            1 in 1000
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+          >
+            2m
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+          >
+            B
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+          >
+            Secret Rune
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+          >
+            1 in 10000
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+          >
+            17m
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+          >
+            C
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</DocumentFragment>
+`;

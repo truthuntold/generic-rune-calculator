@@ -1,0 +1,7 @@
+{
+  "displayName": "Sample (Raw RPS)",
+  "rpsMode": "raw",
+  "labels": { "rps": "Runes / Second", "luck": "Rune Luck (×)" },
+  "defaults": { "rps": "1M", "luck": "1" },
+  "luckRules": { "applyTo": "known" }
+}

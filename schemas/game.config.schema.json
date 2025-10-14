@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GameConfig",
+  "type": "object",
+  "properties": {
+    "displayName": {
+      "type": "string"
+    },
+    "rpsMode": {
+      "type": "string",
+      "enum": ["raw", "derived"]
+    },
+    "labels": {
+      "type": "object",
+      "properties": {
+        "rps": {
+          "type": "string"
+        },
+        "speed": {
+          "type": "string"
+        },
+        "bulk": {
+          "type": "string"
+        },
+        "luck": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "defaults": {
+      "type": "object",
+      "properties": {
+        "rps": {
+          "type": "string"
+        },
+        "speed": {
+          "type": "string"
+        },
+        "bulk": {
+          "type": "string"
+        },
+        "luck": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "luckRules": {
+      "type": "object",
+      "properties": {
+        "applyTo": {
+          "type": "string",
+          "enum": ["known", "all", "none"]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": ["rpsMode"],
+  "additionalProperties": false
+}
