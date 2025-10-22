@@ -24,9 +24,6 @@ export function parseScaled(text: string, scales: Record<string, number>): { val
       return { value: 0, warning: "Invalid number" };
     }
     value = value * scales[suffix];
-    if (value > Number.MAX_SAFE_INTEGER) {
-        return { value: Number.MAX_SAFE_INTEGER, warning: "Input exceeds maximum safe integer" };
-    }
     return { value };
   }
 
@@ -34,10 +31,6 @@ export function parseScaled(text: string, scales: Record<string, number>): { val
   if (isNaN(value)) {
     return { value: 0, warning: "Invalid number" };
   }
-  if (value > Number.MAX_SAFE_INTEGER) {
-    return { value: Number.MAX_SAFE_INTEGER, warning: "Input exceeds maximum safe integer" };
-  }
-
   return { value };
 }
 

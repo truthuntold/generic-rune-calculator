@@ -1,76 +1,262 @@
 [
   {
-    "id": "common",
-    "name": "Common Rune",
+    "id": "aridic",
+    "name": "Aridic",
     "chance": {
       "type": "oneInN",
-      "n": 100
+      "n": 1.54
     },
-    "source": "Anywhere"
+    "source": "Sun Rune",
+    "tags": [
+      "x0.0001 Points"
+    ]
   },
   {
-    "id": "uncommon",
-    "name": "Uncommon Rune",
+    "id": "mirage",
+    "name": "Mirage",
     "chance": {
       "type": "oneInN",
-      "n": 1000
+      "n": 4.44
     },
-    "source": "Anywhere"
+    "source": "Sun Rune",
+    "tags": [
+      "x0.00005 Sand"
+    ]
   },
   {
-    "id": "rare",
-    "name": "Rare Rune",
+    "id": "dunebound",
+    "name": "Dunebound",
     "chance": {
       "type": "oneInN",
-      "n": 10000
+      "n": 8
     },
-    "source": "Anywhere"
+    "source": "Sun Rune",
+    "tags": [
+      "x0.00025 Sand"
+    ]
   },
   {
-    "id": "epic",
-    "name": "Epic Rune",
+    "id": "scorched",
+    "name": "Scorched",
     "chance": {
       "type": "oneInN",
-      "n": "100K"
+      "n": "500k"
     },
-    "source": "Dungeons"
+    "source": "Sun Rune",
+    "tags": [
+      "x0.0025 Points",
+      "x0.005 Sand"
+    ]
   },
   {
-    "id": "legendary",
-    "name": "Legendary Rune",
+    "id": "desolate",
+    "name": "Desolate",
     "chance": {
       "type": "oneInN",
-      "n": "1M"
+      "n": "25m"
     },
-    "source": "Bosses"
+    "source": "Sun Rune",
+    "tags": [
+      "x0.075 Points",
+      "x0.25 Sand",
+      "x0.02 Fossils"
+    ]
   },
   {
-    "id": "mythic",
-    "name": "Mythic Rune",
+    "id": "cacti",
+    "name": "Cacti",
     "chance": {
       "type": "oneInN",
-      "n": "100M"
+      "n": "100m"
     },
-    "source": "Raids"
+    "source": "Sun Rune",
+    "tags": [
+      "x0.15 Points",
+      "x2.5 Sand",
+      "x0.1 Fossils",
+      "x0.02 Oil"
+    ]
   },
   {
-    "id": "secret_rune_1",
-    "name": "Secret Rune 1",
+    "id": "oasis",
+    "name": "Oasis",
     "chance": {
       "type": "oneInN",
       "n": "1B"
     },
-    "source": "Hidden Location",
-    "tags": ["secret"]
+    "source": "Sun Rune",
+    "tags": [
+      "x7.5 Sand",
+      "x2.5 Fossils",
+      "x1 Better points (x1 max)",
+      "x0.2 Oil"
+    ]
   },
   {
-    "id": "secret_rune_2",
-    "name": "Secret Rune 2",
+    "id": "sun_god",
+    "name": "Sun God",
     "chance": {
       "type": "oneInN",
-      "n": "1T"
+      "n": "50b"
     },
-    "source": "Hidden Location",
-    "tags": ["secret", "noluck"]
+    "source": "Sun Rune",
+    "tags": [
+      "x5 Oil",
+      "x2 Better points (x10 max)",
+      "x5 Tier luck (x20 max)",
+      "x0.5 Rune luck (x2 max)"
+    ]
+  },
+  {
+    "id": "temple_god",
+    "name": "Temple God",
+    "chance": {
+      "type": "oneInN",
+      "n": "25qn"
+    },
+    "source": "Sun Rune",
+    "tags": [
+      "x0.25 Rune luck (max 1x)",
+      "+25 Rune Bulk (+500 max)",
+      "x5 Tier Luck (x25 max)",
+      "+25 Tier Bulk (+250 max)"
+    ]
+  },
+  {
+    "id": "sparix",
+    "name": "Sparix",
+    "chance": {
+      "type": "oneInN",
+      "n": 1.09
+    },
+    "source": "Energy Rune",
+    "tags": [
+      "x0.000001 Energy"
+    ]
+  },
+  {
+    "id": "eneris",
+    "name": "Eneris",
+    "chance": {
+      "type": "oneInN",
+      "n": 20
+    },
+    "source": "Energy Rune",
+    "tags": [
+      "x0.00005 Energy"
+    ]
+  },
+  {
+    "id": "voltryn",
+    "name": "Voltryn",
+    "chance": {
+      "type": "oneInN",
+      "n": 50
+    },
+    "source": "Energy Rune",
+    "tags": [
+      "x0.000015 Power"
+    ]
+  },
+  {
+    "id": "dynara",
+    "name": "Dynara",
+    "chance": {
+      "type": "oneInN",
+      "n": "1k"
+    },
+    "source": "Energy Rune",
+    "tags": [
+      "x0.0001 Energy",
+      "x0.0002 Power"
+    ]
+  },
+  {
+    "id": "arkanix",
+    "name": "Arkanix",
+    "chance": {
+      "type": "oneInN",
+      "n": "25b"
+    },
+    "source": "Energy Rune",
+    "tags": [
+      "x0.0002 Power",
+      "x0.000005 Charge",
+      "x0.000002 Tech Points (max x50)"
+    ]
+  },
+  {
+    "id": "fluxion",
+    "name": "Fluxion",
+    "chance": {
+      "type": "oneInN",
+      "n": "75t"
+    },
+    "source": "Energy Rune",
+    "tags": [
+      "x0.5 Power",
+      "x0.0075 Charge",
+      "x0.005 Tech Points (x50 max)"
+    ]
+  },
+  {
+    "id": "luxen",
+    "name": "Luxen",
+    "chance": {
+      "type": "oneInN",
+      "n": "1qd"
+    },
+    "source": "Energy Rune",
+    "tags": [
+      "x5 Power",
+      "x0.3 Circuits",
+      "x5 Tier Luck (x75 max)",
+      "x0.1 Rune Luck (x0.5 max)"
+    ]
+  },
+  {
+    "id": "omnion",
+    "name": "Omnion",
+    "chance": {
+      "type": "oneInN",
+      "n": "5qn"
+    },
+    "source": "Energy Rune",
+    "tags": [
+      "x500 Power",
+      "x250 Circuits",
+      "+25 Rune bulk (+200 max)",
+      "x0.15 Rune Luck (x0.75 max)"
+    ]
+  },
+  {
+    "id": "onion",
+    "name": "Onion",
+    "chance": {
+      "type": "oneInN",
+      "n": "15qn"
+    },
+    "source": "Energy Rune",
+    "tags": [
+      "x0.5 Tech Points",
+      "x0.25 Cores",
+      "+50 Rune bulk (+250 max)",
+      "x0.1 Rune bulk (x0.5 max)"
+    ]
+  },
+  {
+    "id": "radiyn",
+    "name": "Radiyn",
+    "chance": {
+      "type": "oneInN",
+      "n": "75qd"
+    },
+    "source": "Energy Rune",
+    "tags": [
+      "x500 power",
+      "x2.5 Circuits",
+      "x5 Tier Luck",
+      "x0.1 Rune Luck"
+    ]
   }
 ]

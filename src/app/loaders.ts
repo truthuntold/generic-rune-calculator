@@ -5,29 +5,29 @@ import runesSchema from '../../schemas/runes.schema.json';
 export type RpsMode = 'raw' | 'derived';
 
 export interface GameConfig {
-  displayName?: string;
-  rpsMode: RpsMode;
-  labels?: Partial<Record<'rps' | 'speed' | 'bulk' | 'luck', string>>;
-  defaults?: Partial<Record<'rps' | 'speed' | 'bulk' | 'luck', string>>;
-  luckRules?: { applyTo?: 'known' | 'all' | 'none' }; // default 'known'
+    displayName?: string;
+    rpsMode: RpsMode;
+    labels?: Partial<Record<'rps' | 'speed' | 'bulk' | 'luck', string>>;
+    defaults?: Partial<Record<'rps' | 'speed' | 'bulk' | 'luck', string>>;
+    luckRules?: { applyTo?: 'known' | 'all' | 'none' }; // default 'known'
 }
 
 export interface ProbabilityOneInN {
-  type: 'oneInN';
-  n: string | number; // supports huge values, possibly suffixed (e.g., "1Qd")
+    type: 'oneInN';
+    n: string | number; // supports huge values, possibly suffixed (e.g., "1Qd")
 }
 
 export interface RuneRecord {
-  id: string;
-  name: string;
-  chance: ProbabilityOneInN;
-  source?: string;     // where to get it
-  tags?: string[];     // e.g., ["secret"], ["noluck"]
+    id: string;
+    name: string;
+    chance: ProbabilityOneInN;
+    source?: string;     // where to get it
+    tags?: string[];     // e.g., ["secret"], ["noluck"]
 }
 
 const RUNES_URL = import.meta.env.VITE_RUNES_URL || '/runes.json';
 const SCALES_URL = import.meta.env.VITE_SCALES_URL || '/scales.json';
-const GAME_CONFIG_URL = import.meta.env.VITE_GAME_CONFIG_URL || '/game.config.raw.json';
+const GAME_CONFIG_URL = import.meta.env.VITE_GAME_CONFIG_URL || '/game.config.json';
 
 const ajv = new Ajv();
 

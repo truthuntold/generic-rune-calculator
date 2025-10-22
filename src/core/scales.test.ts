@@ -41,10 +41,10 @@ describe('parseScaled', () => {
     expect(parseScaled('1BB', ambiguousScales).warning).toBe('Ambiguous suffix. Matched: B, BB');
   });
 
-  it('should handle overflow', () => {
-    const result = parseScaled('1e100', scales);
-    expect(result.value).toBe(Number.MAX_SAFE_INTEGER);
-    expect(result.warning).toBe('Input exceeds maximum safe integer');
+  it('should handle very large numbers without clamping', () => {
+    const result = parseScaled('1e15', scales);
+    expect(result.value).toBe(1e15);
+    expect(result.warning).toBeUndefined();
   });
 });
 
