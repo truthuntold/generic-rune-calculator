@@ -1,76 +1,269 @@
 [
   {
-    "id": "common",
-    "name": "Common Rune",
+    "id": "starter_beginnings",
+    "name": "Beginnings",
+    "chance": {
+      "type": "oneInN",
+      "n": 1.53
+    },
+    "source": "Starter Rune"
+  },
+  {
+    "id": "starter_impulse",
+    "name": "Impulse",
+    "chance": {
+      "type": "oneInN",
+      "n": 4
+    },
+    "source": "Starter Rune"
+  },
+  {
+    "id": "starter_flow",
+    "name": "Flow",
+    "chance": {
+      "type": "oneInN",
+      "n": 11.11
+    },
+    "source": "Starter Rune"
+  },
+  {
+    "id": "starter_arc",
+    "name": "Arc",
     "chance": {
       "type": "oneInN",
       "n": 100
     },
-    "source": "Anywhere"
+    "source": "Starter Rune"
   },
   {
-    "id": "uncommon",
-    "name": "Uncommon Rune",
+    "id": "starter_discharge",
+    "name": "Discharge",
     "chance": {
       "type": "oneInN",
       "n": 1000
     },
-    "source": "Anywhere"
+    "source": "Starter Rune"
   },
   {
-    "id": "rare",
-    "name": "Rare Rune",
+    "id": "starter_prism_flux",
+    "name": "Prism Flux",
     "chance": {
       "type": "oneInN",
-      "n": 10000
+      "n": 100000
     },
-    "source": "Anywhere"
+    "source": "Starter Rune"
   },
   {
-    "id": "epic",
-    "name": "Epic Rune",
+    "id": "starter_eternal",
+    "name": "Eternal",
     "chance": {
       "type": "oneInN",
-      "n": "100K"
+      "n": 1000000
     },
-    "source": "Dungeons"
+    "source": "Starter Rune",
+    "tags": [
+      "secret"
+    ]
   },
   {
-    "id": "legendary",
-    "name": "Legendary Rune",
+    "id": "starter_aero",
+    "name": "Aero",
     "chance": {
       "type": "oneInN",
-      "n": "1M"
+      "n": 25000000
     },
-    "source": "Bosses"
+    "source": "Starter Rune",
+    "tags": [
+      "secret"
+    ]
   },
   {
-    "id": "mythic",
-    "name": "Mythic Rune",
+    "id": "quantum_static",
+    "name": "Static",
     "chance": {
       "type": "oneInN",
-      "n": "100M"
+      "n": 1.53
     },
-    "source": "Raids"
+    "source": "Quantum Rune"
   },
   {
-    "id": "secret_rune_1",
-    "name": "Secret Rune 1",
+    "id": "quantum_ampacity",
+    "name": "Ampacity",
     "chance": {
       "type": "oneInN",
-      "n": "1B"
+      "n": 4
     },
-    "source": "Hidden Location",
-    "tags": ["secret"]
+    "source": "Quantum Rune"
   },
   {
-    "id": "secret_rune_2",
-    "name": "Secret Rune 2",
+    "id": "quantum_spark",
+    "name": "Spark",
     "chance": {
       "type": "oneInN",
-      "n": "1T"
+      "n": 11.11
     },
-    "source": "Hidden Location",
-    "tags": ["secret", "noluck"]
+    "source": "Quantum Rune"
+  },
+  {
+    "id": "quantum_voltaris",
+    "name": "Voltaris",
+    "chance": {
+      "type": "oneInN",
+      "n": 100
+    },
+    "source": "Quantum Rune"
+  },
+  {
+    "id": "quantum_cryonix",
+    "name": "Cryonix",
+    "chance": {
+      "type": "oneInN",
+      "n": 2000
+    },
+    "source": "Quantum Rune"
+  },
+  {
+    "id": "quantum_quantex",
+    "name": "Quantex",
+    "chance": {
+      "type": "oneInN",
+      "n": 1000000
+    },
+    "source": "Quantum Rune"
+  },
+  {
+    "id": "quantum_oblivion",
+    "name": "Oblivion",
+    "chance": {
+      "type": "oneInN",
+      "n": 2500000
+    },
+    "source": "Quantum Rune",
+    "tags": [
+      "secret"
+    ]
+  },
+  {
+    "id": "power_storm",
+    "name": "Storm",
+    "chance": {
+      "type": "oneInN",
+      "n": 1.53
+    },
+    "source": "Power Rune"
+  },
+  {
+    "id": "power_lightning",
+    "name": "Lightning",
+    "chance": {
+      "type": "oneInN",
+      "n": 4
+    },
+    "source": "Power Rune"
+  },
+  {
+    "id": "power_electra",
+    "name": "Electra",
+    "chance": {
+      "type": "oneInN",
+      "n": 11.11
+    },
+    "source": "Power Rune"
+  },
+  {
+    "id": "power_photon",
+    "name": "Photon",
+    "chance": {
+      "type": "oneInN",
+      "n": 100
+    },
+    "source": "Power Rune"
+  },
+  {
+    "id": "power_plasma",
+    "name": "Plasma",
+    "chance": {
+      "type": "oneInN",
+      "n": 20000
+    },
+    "source": "Power Rune"
+  },
+  {
+    "id": "power_pyra",
+    "name": "Pyra",
+    "chance": {
+      "type": "oneInN",
+      "n": 10000000
+    },
+    "source": "Power Rune"
+  },
+  {
+    "id": "power_umbralith",
+    "name": "Umbralith",
+    "chance": {
+      "type": "oneInN",
+      "n": 10000000
+    },
+    "source": "Power Rune",
+    "tags": [
+      "secret"
+    ]
+  },
+  {
+    "id": "energy_solar",
+    "name": "Solar",
+    "chance": {
+      "type": "oneInN",
+      "n": 4
+    },
+    "source": "Energy Rune"
+  },
+  {
+    "id": "energy_wind",
+    "name": "Wind",
+    "chance": {
+      "type": "oneInN",
+      "n": 11.11
+    },
+    "source": "Energy Rune"
+  },
+  {
+    "id": "energy_coal",
+    "name": "Coal",
+    "chance": {
+      "type": "oneInN",
+      "n": 100
+    },
+    "source": "Energy Rune"
+  },
+  {
+    "id": "energy_biofuel",
+    "name": "BioFuel",
+    "chance": {
+      "type": "oneInN",
+      "n": 200000
+    },
+    "source": "Energy Rune"
+  },
+  {
+    "id": "energy_petroleum",
+    "name": "Petroleum",
+    "chance": {
+      "type": "oneInN",
+      "n": 6250000
+    },
+    "source": "Energy Rune"
+  },
+  {
+    "id": "energy_nuclear",
+    "name": "Nuclear",
+    "chance": {
+      "type": "oneInN",
+      "n": 20000000
+    },
+    "source": "Energy Rune",
+    "tags": [
+      "secret"
+    ]
   }
 ]
