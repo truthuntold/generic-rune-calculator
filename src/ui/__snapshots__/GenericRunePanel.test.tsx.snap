@@ -550,7 +550,7 @@ exports[`GenericRunePanel > matches snapshot 1`] = `
                   <span
                     class="text-xs text-slate-600 italic"
                   >
-                    No modifiers
+                    Modifiers not added yet
                   </span>
                 </div>
               </div>
@@ -641,7 +641,7 @@ exports[`GenericRunePanel > matches snapshot 1`] = `
                   <span
                     class="text-xs text-slate-600 italic"
                   >
-                    No modifiers
+                    Modifiers not added yet
                   </span>
                 </div>
               </div>

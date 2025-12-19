@@ -114,6 +114,13 @@ export function GenericRunePanel({ runes, scales, config }: GenericRunePanelProp
     return 'text-rose-400';
   };
 
+  const formatEtaDisplay = (eta: number) => {
+    if (eta > 604800) { // > 7 days
+      return "Don't even try > 7d";
+    }
+    return formatTimeHuman(eta);
+  };
+
   return (
     <div className="min-h-screen pb-12">
       <header className="py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-800 bg-slate-900/30">
@@ -372,7 +379,7 @@ export function GenericRunePanel({ runes, scales, config }: GenericRunePanelProp
                         <div className={viewMode === 'list' ? 'hidden' : ''}>
                           <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500 mb-1">ETA</p>
                           <p className={`font-mono font-bold ${getEtaColor(rune.eta)}`}>
-                            {formatTimeHuman(rune.eta)}
+                            {formatEtaDisplay(rune.eta)}
                           </p>
                         </div>
                       </div>
@@ -381,7 +388,7 @@ export function GenericRunePanel({ runes, scales, config }: GenericRunePanelProp
                       {viewMode === 'list' && (
                         <div className="col-span-2">
                           <p className={`font-mono font-bold text-lg ${getEtaColor(rune.eta)}`}>
-                            {formatTimeHuman(rune.eta)}
+                            {formatEtaDisplay(rune.eta)}
                           </p>
                         </div>
                       )}
