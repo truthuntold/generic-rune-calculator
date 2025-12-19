@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { effectiveBaseRps, etaSeconds, oneInNToNumber, shouldApplyLuck } from "../core/engine";
-import { formatTimeHuman, parseScaled } from "../core/scales";
+import { formatScaled, formatTimeHuman, parseScaled } from "../core/scales";
 
 export type RpsMode = 'raw' | 'derived';
 
@@ -41,21 +41,45 @@ export function GenericRunePanel({ runes, scales, config }: GenericRunePanelProp
   const [showUnder1Hour, setShowUnder1Hour] = useState(false);
   const [hideInstant, setHideInstant] = useState(false);
   const [showSecretsOnly, setShowSecretsOnly] = useState(false);
+  const [sortField, setSortField] = useState<string>('chance');
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
 
   const baseRps = effectiveBaseRps({ rps, speed, bulk }, config.rpsMode, scales, config.speedInput);
   const luckValue = parseScaled(luck, scales).value;
 
-  const filteredRunes = runes
+  const handleSort = (field: string) => {
+    if (sortField === field) {
+      setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
+    } else {
+      setSortField(field);
+      setSortOrder('asc');
+    }
+  };
+
+  const sortedRunes = runes
     .filter(rune => rune.name.toLowerCase().includes(filter.toLowerCase()))
     .map(rune => {
       const chanceN = oneInNToNumber(rune.chance.n, scales);
       const appliesLuck = shouldApplyLuck(rune, config.luckRules);
       const eta = etaSeconds(chanceN, baseRps, luckValue, appliesLuck);
-      return { ...rune, eta };
+      return { ...rune, eta, chanceN };
     })
     .filter(rune => !showUnder1Hour || rune.eta < 3600)
     .filter(rune => !hideInstant || rune.eta >= 1)
-    .filter(rune => !showSecretsOnly || rune.tags?.includes('secret'));
+    .filter(rune => !showSecretsOnly || rune.tags?.includes('secret'))
+    .sort((a, b) => {
+      let comparison = 0;
+      if (sortField === 'name') {
+        comparison = a.name.localeCompare(b.name);
+      } else if (sortField === 'chance') {
+        comparison = a.chanceN - b.chanceN;
+      } else if (sortField === 'eta') {
+        comparison = a.eta - b.eta;
+      } else if (sortField === 'source') {
+        comparison = (a.source || '').localeCompare(b.source || '');
+      }
+      return sortOrder === 'asc' ? comparison : -comparison;
+    });
 
   return (
     <div className="bg-gray-100 min-h-screen">
@@ -87,7 +111,7 @@ export function GenericRunePanel({ runes, scales, config }: GenericRunePanelProp
               <input type="text" id="luck" value={luck} onChange={e => setLuck(e.target.value)} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" />
             </div>
             <div className="p-4 bg-gray-50 rounded-lg flex items-center justify-center">
-              <p className="text-lg font-semibold text-gray-800">Effective RPS: <span className="text-indigo-600">{baseRps.toLocaleString()}</span></p>
+              <p className="text-lg font-semibold text-gray-800">Effective RPS: <span className="text-indigo-600">{formatScaled(baseRps, scales)}</span></p>
             </div>
           </div>
 
@@ -115,17 +139,33 @@ export function GenericRunePanel({ runes, scales, config }: GenericRunePanelProp
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
                 <tr>
-                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
-                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Chance</th>
-                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ETA</th>
-                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Source</th>
+                  {[
+                    { id: 'name', label: 'Name' },
+                    { id: 'chance', label: 'Chance' },
+                    { id: 'eta', label: 'ETA' },
+                    { id: 'source', label: 'Source' }
+                  ].map(col => (
+                    <th
+                      key={col.id}
+                      scope="col"
+                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100 transition-colors"
+                      onClick={() => handleSort(col.id)}
+                    >
+                      <div className="flex items-center space-x-1">
+                        <span>{col.label}</span>
+                        {sortField === col.id && (
+                          <span>{sortOrder === 'asc' ? '↑' : '↓'}</span>
+                        )}
+                      </div>
+                    </th>
+                  ))}
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
-                {filteredRunes.map(rune => (
+                {sortedRunes.map(rune => (
                   <tr key={rune.id} className="hover:bg-gray-50">
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{rune.name}</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">1 in {rune.chance.n.toString()}</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{rune.chance.n.toString()}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{formatTimeHuman(rune.eta)}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{rune.source}</td>
                   </tr>

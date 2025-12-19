@@ -33,8 +33,30 @@ export function parseScaled(text: string, scales: Record<string, number>): { val
   return { value };
 }
 
-export function formatScaled(n: number): string {
-  return n.toLocaleString();
+export function formatScaled(n: number, scales: Record<string, number>): string {
+  if (n === 0) return "0";
+  if (!isFinite(n)) return "Infinity";
+
+  const absN = Math.abs(n);
+  
+  // Find the largest scale that is less than or equal to absN
+  const candidateSuffixes = Object.entries(scales)
+    .filter(([suffix, value]) => suffix && value <= absN)
+    .sort((a, b) => b[1] - a[1]);
+
+  if (candidateSuffixes.length > 0) {
+    const [suffix, value] = candidateSuffixes[0];
+    const scaled = Math.floor(n / value);
+    return `${scaled}${suffix}`;
+  }
+
+  // If no scale matches (e.g. less than 1000 if that's the smallest scale)
+  // or if we want scientific for very large numbers without scales
+  if (absN >= 1e21) {
+    return n.toExponential(0).replace("+", "");
+  }
+
+  return Math.floor(n).toLocaleString();
 }
 
 export function formatTimeHuman(seconds: number): string {
