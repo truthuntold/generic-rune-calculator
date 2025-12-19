@@ -7,6 +7,7 @@ export type RpsMode = 'raw' | 'derived';
 export interface GameConfig {
   displayName?: string;
   rpsMode: RpsMode;
+  speedInput?: 'perSecond' | 'secondsPerOpen';
   labels?: Partial<Record<'rps' | 'speed' | 'bulk' | 'luck', string>>;
   defaults?: Partial<Record<'rps' | 'speed' | 'bulk' | 'luck', string>>;
   luckRules?: { applyTo?: 'known' | 'all' | 'none' }; // default 'known'

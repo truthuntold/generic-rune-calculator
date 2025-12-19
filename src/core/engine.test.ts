@@ -46,6 +46,11 @@ describe('effectiveBaseRps', () => {
   it('should calculate derived RPS', () => {
     expect(effectiveBaseRps({ speed: '2', bulk: '5' }, 'derived', scales)).toBe(10);
   });
+
+  it('should handle secondsPerOpen speed input', () => {
+    // 0.25 seconds per open -> 4 per second; bulk 2 -> 8 rps
+    expect(effectiveBaseRps({ speed: '0.25', bulk: '2' }, 'derived', scales, 'secondsPerOpen')).toBe(8);
+  });
 });
 
 describe('shouldApplyLuck', () => {

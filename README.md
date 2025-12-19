@@ -59,6 +59,15 @@ This file configures the calculator. You can choose between two `rpsMode` option
 
 You can also customize the labels and default values for the inputs.
 
+Optional: you may specify how the speed input should be interpreted in derived mode via `speedInput`:
+
+```json
+"speedInput": "perSecond" | "secondsPerOpen"
+```
+
+- `perSecond` (default): Speed is treated as opens per second (×/s).
+- `secondsPerOpen`: Speed is treated as seconds per open, which the app converts to opens per second by taking `1 / secondsPerOpen`.
+
 Here is an example of a `raw` mode configuration:
 
 ```json
@@ -77,6 +86,7 @@ And here is an example of a `derived` mode configuration:
 {
   "displayName": "Sample (Derived RPS)",
   "rpsMode": "derived",
+  "speedInput": "secondsPerOpen",
   "labels": { "speed": "Rune Speed (×/s)", "bulk": "Rune Bulk", "luck": "Rune Luck (×)" },
   "defaults": { "speed": "1", "bulk": "1", "luck": "1" },
   "luckRules": { "applyTo": "known" }

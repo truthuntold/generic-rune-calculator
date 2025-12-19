@@ -258,5 +258,65 @@
       "x5 Tier Luck",
       "x0.1 Rune Luck"
     ]
+  },
+  {
+    "id": "garden_tree",
+    "name": "Garden Tree",
+    "chance": {
+      "type": "oneInN",
+      "n": "10Qn"
+    },
+    "source": "Basic Rune",
+    "tags": []
+  },
+  {
+    "id": "frozen_core",
+    "name": "Frozen Core",
+    "chance": {
+      "type": "oneInN",
+      "n": "17.5Qn"
+    },
+    "source": "Frost Rune",
+    "tags": []
+  },
+  {
+    "id": "eternal_gateway",
+    "name": "Eternal Gateway",
+    "chance": {
+      "type": "oneInN",
+      "n": "35Qn"
+    },
+    "source": "Tunnel Rune",
+    "tags": []
+  },
+  {
+    "id": "deepest_depths",
+    "name": "Deepest Depths",
+    "chance": {
+      "type": "oneInN",
+      "n": "55Qn"
+    },
+    "source": "Cavern Rune",
+    "tags": []
+  },
+  {
+    "id": "starlight_sun",
+    "name": "Starlight Sun",
+    "chance": {
+      "type": "oneInN",
+      "n": "75Qn"
+    },
+    "source": "Lantern Rune",
+    "tags": []
+  },
+  {
+    "id": "nexus_entity",
+    "name": "Nexus Entity",
+    "chance": {
+      "type": "oneInN",
+      "n": "125Qn"
+    },
+    "source": "Energy Rune",
+    "tags": []
   }
 ]

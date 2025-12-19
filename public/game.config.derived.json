@@ -1,7 +1,18 @@
 {
   "displayName": "Sample (Derived RPS)",
   "rpsMode": "derived",
-  "labels": { "speed": "Rune Speed (×/s)", "bulk": "Rune Bulk", "luck": "Rune Luck (×)" },
-  "defaults": { "speed": "1", "bulk": "1", "luck": "1" },
-  "luckRules": { "applyTo": "known" }
+  "speedInput": "perSecond",
+  "labels": {
+    "speed": "Rune Speed (×/s)",
+    "bulk": "Rune Bulk",
+    "luck": "Rune Luck (×)"
+  },
+  "defaults": {
+    "speed": "1",
+    "bulk": "1",
+    "luck": "1"
+  },
+  "luckRules": {
+    "applyTo": "known"
+  }
 }

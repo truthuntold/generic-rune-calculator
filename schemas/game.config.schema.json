@@ -8,7 +8,17 @@
     },
     "rpsMode": {
       "type": "string",
-      "enum": ["raw", "derived"]
+      "enum": [
+        "raw",
+        "derived"
+      ]
+    },
+    "speedInput": {
+      "type": "string",
+      "enum": [
+        "perSecond",
+        "secondsPerOpen"
+      ]
     },
     "labels": {
       "type": "object",
@@ -51,12 +61,18 @@
       "properties": {
         "applyTo": {
           "type": "string",
-          "enum": ["known", "all", "none"]
+          "enum": [
+            "known",
+            "all",
+            "none"
+          ]
         }
       },
       "additionalProperties": false
     }
   },
-  "required": ["rpsMode"],
+  "required": [
+    "rpsMode"
+  ],
   "additionalProperties": false
 }

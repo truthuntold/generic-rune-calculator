@@ -7,6 +7,7 @@ export type RpsMode = 'raw' | 'derived';
 export interface GameConfig {
   displayName?: string;
   rpsMode: RpsMode;
+  speedInput?: 'perSecond' | 'secondsPerOpen';
   labels?: Partial<Record<'rps' | 'speed' | 'bulk' | 'luck', string>>;
   defaults?: Partial<Record<'rps' | 'speed' | 'bulk' | 'luck', string>>;
   luckRules?: { applyTo?: 'known' | 'all' | 'none' }; // default 'known'
@@ -41,7 +42,7 @@ export function GenericRunePanel({ runes, scales, config }: GenericRunePanelProp
   const [hideInstant, setHideInstant] = useState(false);
   const [showSecretsOnly, setShowSecretsOnly] = useState(false);
 
-  const baseRps = effectiveBaseRps({ rps, speed, bulk }, config.rpsMode, scales);
+  const baseRps = effectiveBaseRps({ rps, speed, bulk }, config.rpsMode, scales, config.speedInput);
   const luckValue = parseScaled(luck, scales).value;
 
   const filteredRunes = runes
@@ -71,7 +72,7 @@ export function GenericRunePanel({ runes, scales, config }: GenericRunePanelProp
               ) : (
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="speed" className="block text-sm font-medium text-gray-700">{config.labels?.speed || 'Speed'}</label>
+                    <label htmlFor="speed" className="block text-sm font-medium text-gray-700">{config.labels?.speed || (config.speedInput === 'secondsPerOpen' ? 'Seconds / Open' : 'Speed')}</label>
                     <input type="text" id="speed" value={speed} onChange={e => setSpeed(e.target.value)} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" />
                   </div>
                   <div>

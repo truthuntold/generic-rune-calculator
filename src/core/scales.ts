@@ -9,13 +9,12 @@ export function parseScaled(text: string, scales: Record<string, number>): { val
     return { value: 0 };
   }
 
-  const matchingSuffixes = Object.keys(scales).filter(s => cleanedText.endsWith(s.toUpperCase()));
+  // Prefer the longest non-empty matching suffix to avoid ambiguity (e.g., "QnVt" over "Vt").
+  const candidateSuffixes = Object.keys(scales)
+    .filter(s => s && cleanedText.endsWith(s.toUpperCase()))
+    .sort((a, b) => b.length - a.length);
 
-  if (matchingSuffixes.length > 1) {
-    return { value: 0, warning: `Ambiguous suffix. Matched: ${matchingSuffixes.join(', ')}` };
-  }
-
-  const suffix = matchingSuffixes[0];
+  const suffix = candidateSuffixes[0];
 
   if (suffix) {
     const numPart = cleanedText.slice(0, -suffix.length);

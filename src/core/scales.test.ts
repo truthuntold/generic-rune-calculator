@@ -36,9 +36,10 @@ describe('parseScaled', () => {
     expect(parseScaled('  1.5B  ', scales).value).toBe(1.5e9);
   });
 
-  it('should return a warning for ambiguous suffixes', () => {
+  it('should prefer the longest matching suffix when multiple match', () => {
     const ambiguousScales = { ...scales, B: 1e9, BB: 1e10 };
-    expect(parseScaled('1BB', ambiguousScales).warning).toBe('Ambiguous suffix. Matched: B, BB');
+    expect(parseScaled('1BB', ambiguousScales).value).toBe(1e10);
+    expect(parseScaled('2BB', ambiguousScales).value).toBe(2e10);
   });
 
   it('should handle very large numbers without clamping', () => {
