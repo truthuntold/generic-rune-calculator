@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import { GenericRunePanel } from './GenericRunePanel';
 
@@ -66,20 +66,24 @@ describe('GenericRunePanel', () => {
     expect(screen.getByText('10s')).toBeInTheDocument(); // 100 / 10
   });
 
-  it('filters runes by name', () => {
+  it('filters runes by name', async () => {
     render(<GenericRunePanel runes={runes} scales={scales} config={rawConfig} />);
-    const filterInput = screen.getByPlaceholderText('Filter by name');
+    const filterInput = screen.getByPlaceholderText('Search runes or sources...');
     fireEvent.change(filterInput, { target: { value: 'Rune 1' } });
     expect(screen.getByText('Rune 1')).toBeInTheDocument();
-    expect(screen.queryByText('Rune 2')).not.toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.queryByText('Rune 2')).not.toBeInTheDocument();
+    });
   });
 
-  it('filters secret runes', () => {
+  it('filters secret runes', async () => {
     render(<GenericRunePanel runes={runes} scales={scales} config={rawConfig} />);
     const secretsOnlyCheckbox = screen.getByLabelText('Secrets only');
     fireEvent.click(secretsOnlyCheckbox);
     expect(screen.getByText('Secret Rune')).toBeInTheDocument();
-    expect(screen.queryByText('Rune 1')).not.toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.queryByText('Rune 1')).not.toBeInTheDocument();
+    });
   });
 
   it('applies luck correctly', () => {

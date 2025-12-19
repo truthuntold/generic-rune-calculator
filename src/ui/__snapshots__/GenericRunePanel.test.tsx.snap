@@ -3,250 +3,767 @@
 exports[`GenericRunePanel > matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="bg-gray-100 min-h-screen"
+    class="min-h-screen pb-12"
   >
-    <div
-      class="container mx-auto p-4 sm:p-6 lg:p-8"
+    <header
+      class="py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-800 bg-slate-900/30"
     >
       <div
-        class="bg-white rounded-lg shadow-lg p-6"
+        class="max-w-7xl mx-auto"
       >
-        <h1
-          class="text-3xl font-bold mb-6 text-gray-800"
-        >
-          Raw Test
-        </h1>
         <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6"
+          class="flex flex-col md:flex-row md:items-center justify-between gap-8"
         >
-          <div
-            class="p-4 bg-gray-50 rounded-lg"
-          >
-            <div>
-              <label
-                class="block text-sm font-medium text-gray-700"
-                for="rps"
-              >
-                RPS
-              </label>
-              <input
-                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                id="rps"
-                type="text"
-                value="10"
-              />
-            </div>
-          </div>
-          <div
-            class="p-4 bg-gray-50 rounded-lg"
-          >
-            <label
-              class="block text-sm font-medium text-gray-700"
-              for="luck"
+          <div>
+            <h1
+              class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white bg-clip-text text-transparent bg-gradient-to-r from-brand-400 to-indigo-400"
+              style="opacity: 0; transform: translateY(-20px);"
             >
-              Luck
-            </label>
-            <input
-              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-              id="luck"
-              type="text"
-              value="1"
-            />
-          </div>
-          <div
-            class="p-4 bg-gray-50 rounded-lg flex items-center justify-center"
-          >
+              Raw Test
+            </h1>
             <p
-              class="text-lg font-semibold text-gray-800"
+              class="mt-2 text-slate-400 text-lg"
             >
-              Effective RPS: 
-              <span
-                class="text-indigo-600"
-              >
-                10
-              </span>
+              Calculate your luck and discovery rates
             </p>
           </div>
-        </div>
-        <div
-          class="bg-gray-50 rounded-lg p-4 mb-6"
-        >
           <div
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
+            class="glass-panel p-6 flex items-center gap-6"
+            style="opacity: 0; transform: scale(0.95);"
           >
             <div
-              class="col-span-1 sm:col-span-2 lg:col-span-1"
+              class="bg-brand-500/10 p-3 rounded-xl"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-zap w-8 h-8 text-brand-400"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"
+                />
+              </svg>
+            </div>
+            <div>
+              <p
+                class="text-sm font-medium text-slate-400 uppercase tracking-wider"
+              >
+                Effective RPS
+              </p>
+              <p
+                class="text-3xl font-mono font-bold text-white"
+              >
+                10
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8"
+    >
+      <div
+        class="grid grid-cols-1 lg:grid-cols-4 gap-8"
+      >
+        <aside
+          class="lg:col-span-1 space-y-6"
+        >
+          <div
+            class="glass-panel p-6 space-y-6 sticky top-8"
+          >
+            <h2
+              class="text-xl font-bold text-white flex items-center gap-2"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-funnel w-5 h-5 text-brand-400"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"
+                />
+              </svg>
+              Configuration
+            </h2>
+            <div
+              class="space-y-4"
+            >
+              <div
+                class="space-y-1.5"
+              >
+                <label
+                  class="text-sm font-semibold text-slate-400"
+                  for="rps"
+                >
+                  RPS
+                </label>
+                <div
+                  class="relative"
+                >
+                  <input
+                    class="input-field w-full pl-3 pr-10 py-2"
+                    id="rps"
+                    placeholder="0.0"
+                    type="text"
+                    value="10"
+                  />
+                  <svg
+                    aria-hidden="true"
+                    class="lucide lucide-zap absolute right-3 top-2.5 w-4 h-4 text-slate-500"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="space-y-1.5"
+              >
+                <label
+                  class="text-sm font-semibold text-slate-400"
+                  for="luck"
+                >
+                  Luck
+                </label>
+                <div
+                  class="relative"
+                >
+                  <input
+                    class="input-field w-full pl-3 pr-10 py-2"
+                    id="luck"
+                    type="text"
+                    value="1"
+                  />
+                  <svg
+                    aria-hidden="true"
+                    class="lucide lucide-sparkles absolute right-3 top-2.5 w-4 h-4 text-brand-400"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"
+                    />
+                    <path
+                      d="M20 2v4"
+                    />
+                    <path
+                      d="M22 4h-4"
+                    />
+                    <circle
+                      cx="4"
+                      cy="20"
+                      r="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="pt-6 border-t border-slate-800 space-y-4"
+            >
+              <h3
+                class="text-sm font-bold text-slate-500 uppercase tracking-widest"
+              >
+                Filters
+              </h3>
+              <div
+                class="space-y-3"
+              >
+                <label
+                  class="flex items-center gap-3 cursor-pointer group"
+                  for="showUnder1Hour"
+                >
+                  <div
+                    class="relative flex items-center"
+                  >
+                    <input
+                      class="peer sr-only"
+                      id="showUnder1Hour"
+                      type="checkbox"
+                    />
+                    <div
+                      class="w-10 h-6 bg-slate-700 rounded-full peer peer-checked:bg-brand-600 transition-colors"
+                    />
+                    <div
+                      class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform peer-checked:translate-x-4"
+                    />
+                  </div>
+                  <span
+                    class="text-sm font-medium text-slate-300 group-hover:text-white transition-colors"
+                  >
+                    Under 1 hour
+                  </span>
+                </label>
+                <label
+                  class="flex items-center gap-3 cursor-pointer group"
+                  for="hideInstant"
+                >
+                  <div
+                    class="relative flex items-center"
+                  >
+                    <input
+                      class="peer sr-only"
+                      id="hideInstant"
+                      type="checkbox"
+                    />
+                    <div
+                      class="w-10 h-6 bg-slate-700 rounded-full peer peer-checked:bg-brand-600 transition-colors"
+                    />
+                    <div
+                      class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform peer-checked:translate-x-4"
+                    />
+                  </div>
+                  <span
+                    class="text-sm font-medium text-slate-300 group-hover:text-white transition-colors"
+                  >
+                    Hide Instant
+                  </span>
+                </label>
+                <label
+                  class="flex items-center gap-3 cursor-pointer group"
+                  for="showSecretsOnly"
+                >
+                  <div
+                    class="relative flex items-center"
+                  >
+                    <input
+                      class="peer sr-only"
+                      id="showSecretsOnly"
+                      type="checkbox"
+                    />
+                    <div
+                      class="w-10 h-6 bg-slate-700 rounded-full peer peer-checked:bg-brand-600 transition-colors"
+                    />
+                    <div
+                      class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform peer-checked:translate-x-4"
+                    />
+                  </div>
+                  <span
+                    class="text-sm font-medium text-slate-300 group-hover:text-white transition-colors"
+                  >
+                    Secrets only
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <section
+          class="lg:col-span-3 space-y-6"
+        >
+          <div
+            class="glass-panel p-4 flex flex-col sm:flex-row items-center justify-between gap-4"
+          >
+            <div
+              class="relative w-full sm:w-96"
             >
               <input
-                class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                placeholder="Filter by name"
+                class="input-field w-full pl-10 pr-4 py-2"
+                placeholder="Search runes or sources..."
                 type="text"
                 value=""
               />
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-search absolute left-3 top-2.5 w-5 h-5 text-slate-500"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m21 21-4.34-4.34"
+                />
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+              </svg>
             </div>
             <div
-              class="flex items-center"
+              class="flex items-center gap-4 w-full sm:w-auto overflow-x-auto pb-1 sm:pb-0"
             >
-              <input
-                class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                id="showUnder1Hour"
-                type="checkbox"
-              />
-              <label
-                class="ml-2 block text-sm text-gray-900"
-                for="showUnder1Hour"
+              <span
+                class="text-sm font-medium text-slate-500 whitespace-nowrap"
               >
-                Under 1 hour
-              </label>
-            </div>
-            <div
-              class="flex items-center"
-            >
-              <input
-                class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                id="hideInstant"
-                type="checkbox"
+                3 results
+              </span>
+              <div
+                class="h-6 w-px bg-slate-700 mx-1"
               />
-              <label
-                class="ml-2 block text-sm text-gray-900"
-                for="hideInstant"
+              <div
+                class="flex items-center bg-slate-800 p-1 rounded-lg"
               >
-                Hide Instant
-              </label>
-            </div>
-            <div
-              class="flex items-center"
-            >
-              <input
-                class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                id="showSecretsOnly"
-                type="checkbox"
+                <button
+                  class="p-1.5 rounded-md transition-colors bg-slate-700 text-white shadow-sm"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="lucide lucide-layout-grid w-5 h-5"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      height="7"
+                      rx="1"
+                      width="7"
+                      x="3"
+                      y="3"
+                    />
+                    <rect
+                      height="7"
+                      rx="1"
+                      width="7"
+                      x="14"
+                      y="3"
+                    />
+                    <rect
+                      height="7"
+                      rx="1"
+                      width="7"
+                      x="14"
+                      y="14"
+                    />
+                    <rect
+                      height="7"
+                      rx="1"
+                      width="7"
+                      x="3"
+                      y="14"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="p-1.5 rounded-md transition-colors text-slate-400 hover:text-slate-200"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="lucide lucide-list w-5 h-5"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3 5h.01"
+                    />
+                    <path
+                      d="M3 12h.01"
+                    />
+                    <path
+                      d="M3 19h.01"
+                    />
+                    <path
+                      d="M8 5h13"
+                    />
+                    <path
+                      d="M8 12h13"
+                    />
+                    <path
+                      d="M8 19h13"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="h-6 w-px bg-slate-700 mx-2"
               />
-              <label
-                class="ml-2 block text-sm text-gray-900"
-                for="showSecretsOnly"
+              <button
+                class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors bg-brand-500/10 text-brand-400"
               >
-                Secrets only
-              </label>
+                Chance
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-arrow-up-narrow-wide w-4 h-4"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m3 8 4-4 4 4"
+                  />
+                  <path
+                    d="M7 4v16"
+                  />
+                  <path
+                    d="M11 12h4"
+                  />
+                  <path
+                    d="M11 16h7"
+                  />
+                  <path
+                    d="M11 20h10"
+                  />
+                </svg>
+              </button>
+              <button
+                class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors text-slate-400 hover:bg-slate-800"
+              >
+                ETA
+              </button>
             </div>
           </div>
-        </div>
-        <div
-          class="overflow-x-auto"
-        >
-          <table
-            class="min-w-full divide-y divide-gray-200"
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6"
           >
-            <thead
-              class="bg-gray-50"
+            <div
+              class="glass-panel group overflow-hidden flex flex-col"
+              style="opacity: 0; transform: scale(0.9);"
             >
-              <tr>
-                <th
-                  class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                  scope="col"
+              <div
+                class="p-6 flex-1"
+              >
+                <div
+                  class="mb-4"
                 >
-                  Name
-                </th>
-                <th
-                  class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                  scope="col"
+                  <div
+                    class="flex items-center justify-between"
+                  >
+                    <h3
+                      class="text-xl font-bold text-white group-hover:text-brand-400 transition-colors"
+                    >
+                      Rune 1
+                    </h3>
+                  </div>
+                  <p
+                    class="text-sm text-slate-500 mt-1 flex items-center gap-1.5"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="lucide lucide-info w-3.5 h-3.5"
+                      fill="none"
+                      height="24"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="10"
+                      />
+                      <path
+                        d="M12 16v-4"
+                      />
+                      <path
+                        d="M12 8h.01"
+                      />
+                    </svg>
+                    A
+                  </p>
+                </div>
+                <div
+                  class="grid grid-cols-2 gap-4 mb-6 pt-4 border-t border-slate-800"
                 >
-                  Chance
-                </th>
-                <th
-                  class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                  scope="col"
+                  <div>
+                    <p
+                      class="text-[10px] uppercase tracking-widest font-bold text-slate-500 mb-1"
+                    >
+                      Chance
+                    </p>
+                    <p
+                      class="font-mono font-medium text-slate-200"
+                    >
+                      1 in 100
+                    </p>
+                  </div>
+                  <div
+                    class=""
+                  >
+                    <p
+                      class="text-[10px] uppercase tracking-widest font-bold text-slate-500 mb-1"
+                    >
+                      ETA
+                    </p>
+                    <p
+                      class="font-mono font-bold text-emerald-300"
+                    >
+                      10s
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="mt-auto flex flex-wrap gap-2 pt-4"
                 >
-                  ETA
-                </th>
-                <th
-                  class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                  scope="col"
-                >
-                  Source
-                </th>
-              </tr>
-            </thead>
-            <tbody
-              class="bg-white divide-y divide-gray-200"
+                  <span
+                    class="text-xs text-slate-600 italic"
+                  >
+                    No modifiers
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="glass-panel group overflow-hidden flex flex-col"
+              style="opacity: 0; transform: scale(0.9);"
             >
-              <tr
-                class="hover:bg-gray-50"
+              <div
+                class="p-6 flex-1"
               >
-                <td
-                  class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                <div
+                  class="mb-4"
                 >
-                  Rune 1
-                </td>
-                <td
-                  class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                  <div
+                    class="flex items-center justify-between"
+                  >
+                    <h3
+                      class="text-xl font-bold text-white group-hover:text-brand-400 transition-colors"
+                    >
+                      Rune 2
+                    </h3>
+                  </div>
+                  <p
+                    class="text-sm text-slate-500 mt-1 flex items-center gap-1.5"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="lucide lucide-info w-3.5 h-3.5"
+                      fill="none"
+                      height="24"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="10"
+                      />
+                      <path
+                        d="M12 16v-4"
+                      />
+                      <path
+                        d="M12 8h.01"
+                      />
+                    </svg>
+                    B
+                  </p>
+                </div>
+                <div
+                  class="grid grid-cols-2 gap-4 mb-6 pt-4 border-t border-slate-800"
                 >
-                  1 in 100
-                </td>
-                <td
-                  class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                  <div>
+                    <p
+                      class="text-[10px] uppercase tracking-widest font-bold text-slate-500 mb-1"
+                    >
+                      Chance
+                    </p>
+                    <p
+                      class="font-mono font-medium text-slate-200"
+                    >
+                      1 in 1000
+                    </p>
+                  </div>
+                  <div
+                    class=""
+                  >
+                    <p
+                      class="text-[10px] uppercase tracking-widest font-bold text-slate-500 mb-1"
+                    >
+                      ETA
+                    </p>
+                    <p
+                      class="font-mono font-bold text-sky-300"
+                    >
+                      2m
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="mt-auto flex flex-wrap gap-2 pt-4"
                 >
-                  10s
-                </td>
-                <td
-                  class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                >
-                  A
-                </td>
-              </tr>
-              <tr
-                class="hover:bg-gray-50"
+                  <span
+                    class="text-xs text-slate-600 italic"
+                  >
+                    No modifiers
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="glass-panel group overflow-hidden flex flex-col"
+              style="opacity: 0; transform: scale(0.9);"
+            >
+              <div
+                class="p-6 flex-1"
               >
-                <td
-                  class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                <div
+                  class="mb-4"
                 >
-                  Rune 2
-                </td>
-                <td
-                  class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                  <div
+                    class="flex items-center justify-between"
+                  >
+                    <h3
+                      class="text-xl font-bold text-white group-hover:text-brand-400 transition-colors"
+                    >
+                      Secret Rune
+                    </h3>
+                    <svg
+                      aria-hidden="true"
+                      class="lucide lucide-shield-alert w-4 h-4 text-rose-500"
+                      fill="none"
+                      height="24"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                      />
+                      <path
+                        d="M12 8v4"
+                      />
+                      <path
+                        d="M12 16h.01"
+                      />
+                    </svg>
+                  </div>
+                  <p
+                    class="text-sm text-slate-500 mt-1 flex items-center gap-1.5"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="lucide lucide-info w-3.5 h-3.5"
+                      fill="none"
+                      height="24"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="10"
+                      />
+                      <path
+                        d="M12 16v-4"
+                      />
+                      <path
+                        d="M12 8h.01"
+                      />
+                    </svg>
+                    C
+                  </p>
+                </div>
+                <div
+                  class="grid grid-cols-2 gap-4 mb-6 pt-4 border-t border-slate-800"
                 >
-                  1 in 1000
-                </td>
-                <td
-                  class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                  <div>
+                    <p
+                      class="text-[10px] uppercase tracking-widest font-bold text-slate-500 mb-1"
+                    >
+                      Chance
+                    </p>
+                    <p
+                      class="font-mono font-medium text-slate-200"
+                    >
+                      1 in 10000
+                    </p>
+                  </div>
+                  <div
+                    class=""
+                  >
+                    <p
+                      class="text-[10px] uppercase tracking-widest font-bold text-slate-500 mb-1"
+                    >
+                      ETA
+                    </p>
+                    <p
+                      class="font-mono font-bold text-sky-300"
+                    >
+                      17m
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="mt-auto flex flex-wrap gap-2 pt-4"
                 >
-                  2m
-                </td>
-                <td
-                  class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                >
-                  B
-                </td>
-              </tr>
-              <tr
-                class="hover:bg-gray-50"
-              >
-                <td
-                  class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
-                >
-                  Secret Rune
-                </td>
-                <td
-                  class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                >
-                  1 in 10000
-                </td>
-                <td
-                  class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                >
-                  17m
-                </td>
-                <td
-                  class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                >
-                  C
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+                  <span
+                    class="px-2 py-1 rounded-md bg-slate-800 text-[10px] font-bold text-slate-400 uppercase tracking-tight border border-slate-700/50"
+                  >
+                    secret
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
+    </main>
   </div>
 </DocumentFragment>
 `;

@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-200 antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+.glass-panel {
+  @apply bg-slate-900/50 backdrop-blur-md border border-slate-800 rounded-2xl shadow-xl;
+}
+
+.input-field {
+  @apply bg-slate-800 border-slate-700 text-slate-100 rounded-lg focus:ring-brand-500 focus:border-brand-500 transition-all;
+}
+
+.btn-primary {
+  @apply px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg font-medium transition-colors shadow-lg shadow-brand-900/20;
+}
