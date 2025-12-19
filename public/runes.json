@@ -637,6 +637,139 @@
     ]
   },
   {
+    "id": "glow",
+    "name": "Glow",
+    "chance": {
+      "type": "oneInN",
+      "n": 1.11
+    },
+    "source": "Lantern Rune",
+    "tags": [
+      "x0.0000025 Gold"
+    ]
+  },
+  {
+    "id": "flicker",
+    "name": "Flicker",
+    "chance": {
+      "type": "oneInN",
+      "n": 13.3
+    },
+    "source": "Lantern Rune",
+    "tags": [
+      "x0.000005 Platinum"
+    ]
+  },
+  {
+    "id": "beacon",
+    "name": "Beacon",
+    "chance": {
+      "type": "oneInN",
+      "n": 44.4
+    },
+    "source": "Lantern Rune",
+    "tags": [
+      "x0.000015 Palladium"
+    ]
+  },
+  {
+    "id": "radiant",
+    "name": "Radiant",
+    "chance": {
+      "type": "oneInN",
+      "n": "1k"
+    },
+    "source": "Lantern Rune",
+    "tags": [
+      "x0.0001 Emerald"
+    ]
+  },
+  {
+    "id": "lightveil",
+    "name": "Lightveil",
+    "chance": {
+      "type": "oneInN",
+      "n": "1B"
+    },
+    "source": "Lantern Rune",
+    "tags": [
+      "x0.0003 Sapphire"
+    ]
+  },
+  {
+    "id": "solflare",
+    "name": "Solflare",
+    "chance": {
+      "type": "oneInN",
+      "n": "1T"
+    },
+    "source": "Lantern Rune",
+    "tags": [
+      "x0.075 Ruby",
+      "x0.025 Cash"
+    ]
+  },
+  {
+    "id": "luminaris",
+    "name": "Luminaris",
+    "chance": {
+      "type": "oneInN",
+      "n": "5T"
+    },
+    "source": "Lantern Rune",
+    "tags": [
+      "x0.25 Diamond",
+      "x0.1 Obsidian",
+      "x0.5 Dust",
+      "+5 Rune Bulk (+30 max)"
+    ]
+  },
+  {
+    "id": "eclipsion",
+    "name": "Eclipsion",
+    "chance": {
+      "type": "oneInN",
+      "n": "50T"
+    },
+    "source": "Lantern Rune",
+    "tags": [
+      "x3 Mythril",
+      "x1 Adamantite",
+      "x10 Tier Luck (x75 max)",
+      "0.15x Rune luck (0.75x max)"
+    ]
+  },
+  {
+    "id": "starlight_sun",
+    "name": "Starlight Sun",
+    "chance": {
+      "type": "oneInN",
+      "n": "75Qn"
+    },
+    "source": "Lantern Rune",
+    "tags": [
+      "x0.04 Rune Luck (x0.4 max)",
+      "+15 Rune Bulk (+150 max)",
+      "+10 Tier Bulk (+200 max)",
+      "x5k Emerald"
+    ]
+  },
+  {
+    "id": "supernova_star",
+    "name": "Supernova Star",
+    "chance": {
+      "type": "oneInN",
+      "n": "25No"
+    },
+    "source": "Lantern Rune",
+    "tags": [
+      "x1k Netherite",
+      "x0.001 Ore Multiplier (x25 max)",
+      "x0.03 Rune Luck (x0.75 max)",
+      "+2.5k Rune Bulk (+350k max)"
+    ]
+  },
+  {
     "id": "sparix",
     "name": "Sparix",
     "chance": {
@@ -645,7 +778,7 @@
     },
     "source": "Energy Rune",
     "tags": [
-      "x0.000001 Energy"
+      "x0.00000375 Energy"
     ]
   },
   {
@@ -657,7 +790,7 @@
     },
     "source": "Energy Rune",
     "tags": [
-      "x0.00005 Energy"
+      "x0.0000375 Energy"
     ]
   },
   {
@@ -669,7 +802,7 @@
     },
     "source": "Energy Rune",
     "tags": [
-      "x0.000015 Power"
+      "x0.00009 Power"
     ]
   },
   {
@@ -681,8 +814,8 @@
     },
     "source": "Energy Rune",
     "tags": [
-      "x0.0001 Energy",
-      "x0.0002 Power"
+      "x0.0018 Energy",
+      "x0.002 Power"
     ]
   },
   {
@@ -690,13 +823,13 @@
     "name": "Arkanix",
     "chance": {
       "type": "oneInN",
-      "n": "25b"
+      "n": "25B"
     },
     "source": "Energy Rune",
     "tags": [
-      "x0.0002 Power",
-      "x0.000005 Charge",
-      "x0.000002 Tech Points (max x50)"
+      "x0.0005 Power",
+      "x0.000015 Charge",
+      "x0.000002 Tech Points (x50 max)"
     ]
   },
   {
@@ -704,12 +837,12 @@
     "name": "Fluxion",
     "chance": {
       "type": "oneInN",
-      "n": "75t"
+      "n": "75T"
     },
     "source": "Energy Rune",
     "tags": [
-      "x0.5 Power",
-      "x0.0075 Charge",
+      "x1.25 Power",
+      "x0.06 Charge",
       "x0.005 Tech Points (x50 max)"
     ]
   },
@@ -718,12 +851,27 @@
     "name": "Luxen",
     "chance": {
       "type": "oneInN",
-      "n": "1qd"
+      "n": "1Qd"
     },
     "source": "Energy Rune",
     "tags": [
-      "x5 Power",
-      "x0.3 Circuits",
+      "x12 Power",
+      "x0.8 Charge",
+      "x0.1 Circuits",
+      "x0.2 Tech Points (x50 max)"
+    ]
+  },
+  {
+    "id": "radiyn",
+    "name": "Radiyn",
+    "chance": {
+      "type": "oneInN",
+      "n": "75Qd"
+    },
+    "source": "Energy Rune",
+    "tags": [
+      "x500 Power",
+      "x2.5 Circuits",
       "x5 Tier Luck (x75 max)",
       "x0.1 Rune Luck (x0.5 max)"
     ]
@@ -733,13 +881,13 @@
     "name": "Omnion",
     "chance": {
       "type": "oneInN",
-      "n": "5qn"
+      "n": "5Qn"
     },
     "source": "Energy Rune",
     "tags": [
-      "x500 Power",
+      "x50000 Power",
       "x250 Circuits",
-      "+25 Rune bulk (+200 max)",
+      "+25 Rune Bulk (+200 max)",
       "x0.15 Rune Luck (x0.75 max)"
     ]
   },
@@ -748,29 +896,14 @@
     "name": "Onion",
     "chance": {
       "type": "oneInN",
-      "n": "15qn"
+      "n": "15Qn"
     },
     "source": "Energy Rune",
     "tags": [
       "x0.5 Tech Points",
       "x0.25 Cores",
-      "+50 Rune bulk (+250 max)",
-      "x0.1 Rune bulk (x0.5 max)"
-    ]
-  },
-  {
-    "id": "radiyn",
-    "name": "Radiyn",
-    "chance": {
-      "type": "oneInN",
-      "n": "75qd"
-    },
-    "source": "Energy Rune",
-    "tags": [
-      "x500 power",
-      "x2.5 Circuits",
-      "x5 Tier Luck",
-      "x0.1 Rune Luck"
+      "+50 Rune Bulk (+250 max)",
+      "x0.1 Rune Bulk (x0.5 max)"
     ]
   },
   {
@@ -781,16 +914,572 @@
       "n": "125Qn"
     },
     "source": "Energy Rune",
-    "tags": []
+    "tags": [
+      "x0.05 Rune Luck (x0.5 max)",
+      "+20 Rune Bulk (+500 max)",
+      "x20 Tier Luck (x300 max)",
+      "+25 Tier Bulk (+500 max)"
+    ]
   },
   {
-    "id": "starlight_sun",
-    "name": "Starlight Sun",
+    "id": "nai",
+    "name": "Nai",
     "chance": {
       "type": "oneInN",
-      "n": "75Qn"
+      "n": 1.02
     },
-    "source": "Lantern Rune",
-    "tags": []
+    "source": "Waves Rune",
+    "tags": [
+      "x0.000000002 Common Fish"
+    ]
+  },
+  {
+    "id": "rill",
+    "name": "Rill",
+    "chance": {
+      "type": "oneInN",
+      "n": 50.8
+    },
+    "source": "Waves Rune",
+    "tags": [
+      "x0.00000005 Common Fish"
+    ]
+  },
+  {
+    "id": "maru",
+    "name": "Maru",
+    "chance": {
+      "type": "oneInN",
+      "n": "3.33k"
+    },
+    "source": "Waves Rune",
+    "tags": [
+      "x0.00003 Common Fish"
+    ]
+  },
+  {
+    "id": "vash",
+    "name": "Vash",
+    "chance": {
+      "type": "oneInN",
+      "n": "5m"
+    },
+    "source": "Waves Rune",
+    "tags": [
+      "x0.001 Uncommon Fish"
+    ]
+  },
+  {
+    "id": "selyn",
+    "name": "Selyn",
+    "chance": {
+      "type": "oneInN",
+      "n": "5Qn"
+    },
+    "source": "Waves Rune",
+    "tags": [
+      "x0.06 Uncommon Fish",
+      "x0.015 Rare Fish"
+    ]
+  },
+  {
+    "id": "korren",
+    "name": "Korren",
+    "chance": {
+      "type": "oneInN",
+      "n": "100Qn"
+    },
+    "source": "Waves Rune",
+    "tags": [
+      "x0.1 Uncommon Fish",
+      "x0.02 Rare Fish",
+      "x0.004 Epic Fish",
+      "+5 Rune Bulk (+2.5k max)"
+    ]
+  },
+  {
+    "id": "pelara",
+    "name": "Pelara",
+    "chance": {
+      "type": "oneInN",
+      "n": "2.5Sx"
+    },
+    "source": "Waves Rune",
+    "tags": [
+      "x0.5 Rare Fish",
+      "x0.1 Epic Fish",
+      "x0.015 Coins",
+      "+10 Rune Bulk (+5k max)"
+    ]
+  },
+  {
+    "id": "thaln",
+    "name": "Thaln",
+    "chance": {
+      "type": "oneInN",
+      "n": "30Sx"
+    },
+    "source": "Waves Rune",
+    "tags": [
+      "x1 Epic Fish",
+      "x0.1 Legendary Fish",
+      "x0.05 Pearls",
+      "x20 Tier Luck (x500 max)"
+    ]
+  },
+  {
+    "id": "abyen",
+    "name": "Abyen",
+    "chance": {
+      "type": "oneInN",
+      "n": "750Sx"
+    },
+    "source": "Waves Rune",
+    "tags": [
+      "x30 Epic Fish",
+      "x1.75 Legendary Fish",
+      "x3 Coins",
+      "x.010 Rune Luck (x0.25 max)"
+    ]
+  },
+  {
+    "id": "levath",
+    "name": "Levath",
+    "chance": {
+      "type": "oneInN",
+      "n": "20Sp"
+    },
+    "source": "Waves Rune",
+    "tags": [
+      "x60 Legendary Fish",
+      "x150 Coins",
+      "x0.05 Pearls",
+      "x50 Pearls",
+      "x0.02 Rune Luck (x0.5 max)"
+    ]
+  },
+  {
+    "id": "maerion",
+    "name": "Maerion",
+    "chance": {
+      "type": "oneInN",
+      "n": "1.5Oc"
+    },
+    "source": "Waves Rune",
+    "tags": [
+      "x0.05 Rune Luck (x1.5 max)",
+      "+250 Rune Bulk (+50k max)",
+      "x50 Tier Luck (x3k max)",
+      "+75 Tier Bulk (+4.5k max)"
+    ]
+  },
+  {
+    "id": "myrt",
+    "name": "Myrt",
+    "chance": {
+      "type": "oneInN",
+      "n": 1
+    },
+    "source": "Capstone Rune",
+    "tags": [
+      "x0.000000000000004 Fungus"
+    ]
+  },
+  {
+    "id": "spyrn",
+    "name": "Spyrn",
+    "chance": {
+      "type": "oneInN",
+      "n": 500
+    },
+    "source": "Capstone Rune",
+    "tags": [
+      "x0.000000000001 Fungus"
+    ]
+  },
+  {
+    "id": "glisq",
+    "name": "Glisq",
+    "chance": {
+      "type": "oneInN",
+      "n": "1m"
+    },
+    "source": "Capstone Rune",
+    "tags": [
+      "x0.000000002 Fungus"
+    ]
+  },
+  {
+    "id": "thryl",
+    "name": "Thryl",
+    "chance": {
+      "type": "oneInN",
+      "n": "5B"
+    },
+    "source": "Capstone Rune",
+    "tags": [
+      "x0.000012 Fungus"
+    ]
+  },
+  {
+    "id": "micraun",
+    "name": "Micraun",
+    "chance": {
+      "type": "oneInN",
+      "n": "30Sp"
+    },
+    "source": "Capstone Rune",
+    "tags": [
+      "x0.005 Fungus"
+    ]
+  },
+  {
+    "id": "faeclot",
+    "name": "Faeclot",
+    "chance": {
+      "type": "oneInN",
+      "n": "600Sp"
+    },
+    "source": "Capstone Rune",
+    "tags": [
+      "x0.1 Fungus",
+      "x0.02 Spores"
+    ]
+  },
+  {
+    "id": "brumelle",
+    "name": "Brumelle",
+    "chance": {
+      "type": "oneInN",
+      "n": "15Oc"
+    },
+    "source": "Capstone Rune",
+    "tags": [
+      "x2.5 Fungus",
+      "x0.5 Spores",
+      "x0.1 Glowy Crystals",
+      "+250 Rune Bulk (+100k max)"
+    ]
+  },
+  {
+    "id": "cytherin",
+    "name": "Cytherin",
+    "chance": {
+      "type": "oneInN",
+      "n": "200Oc"
+    },
+    "source": "Capstone Rune",
+    "tags": [
+      "x50 Fungus",
+      "x6 Spores",
+      "x1.5 Glowy Crystals",
+      "+500 Rune Bulk (+150k max)"
+    ]
+  },
+  {
+    "id": "mycoshard",
+    "name": "Mycoshard",
+    "chance": {
+      "type": "oneInN",
+      "n": "1.5No"
+    },
+    "source": "Capstone Rune",
+    "tags": [
+      "x50 Spores",
+      "x15 Glowy Crystals",
+      "x0.05 Magic Energy",
+      "x0.005 Rune Luck (x0.5 max)"
+    ]
+  },
+  {
+    "id": "sporethane",
+    "name": "Sporethane",
+    "chance": {
+      "type": "oneInN",
+      "n": "25No"
+    },
+    "source": "Capstone Rune",
+    "tags": [
+      "x1k Spores",
+      "x350 Glowy Crystals",
+      "x1.5 Magic Energy",
+      "x0.01 Rune Luck (x1.25 max)"
+    ]
+  },
+  {
+    "id": "echomycra",
+    "name": "Echomycra",
+    "chance": {
+      "type": "oneInN",
+      "n": "500No"
+    },
+    "source": "Capstone Rune",
+    "tags": [
+      "+5000 Rune Bulk (+1m max)",
+      "x0.02 Rune Luck (x3 max)",
+      "x0.01 Tier Bulk (x1.25 max)",
+      "x500 Tier Luck (x100k max)"
+    ]
+  },
+  {
+    "id": "dustfall",
+    "name": "Dustfall",
+    "chance": {
+      "type": "oneInN",
+      "n": 1
+    },
+    "source": "Astryx Rune",
+    "tags": [
+      "x0.0000000000000015 Dirtite"
+    ]
+  },
+  {
+    "id": "meteorite",
+    "name": "Meteorite",
+    "chance": {
+      "type": "oneInN",
+      "n": "200k"
+    },
+    "source": "Astryx Rune",
+    "tags": [
+      "x0.000000000015 Dirtite",
+      "x0.0000000000025 Moonlite"
+    ]
+  },
+  {
+    "id": "cometborn",
+    "name": "Cometborn",
+    "chance": {
+      "type": "oneInN",
+      "n": "1t"
+    },
+    "source": "Astryx Rune",
+    "tags": [
+      "x0.000075 Dirtite",
+      "x0.0000125 Moonlite",
+      "x0.000003 Marsite"
+    ]
+  },
+  {
+    "id": "cryostone",
+    "name": "Cryostone",
+    "chance": {
+      "type": "oneInN",
+      "n": "5No"
+    },
+    "source": "Astryx Rune",
+    "tags": [
+      "x1 Dirtite",
+      "x0.15 Moonlite",
+      "x0.04 Marsite",
+      "x0.01 Venusite"
+    ]
+  },
+  {
+    "id": "lunaris",
+    "name": "Lunaris",
+    "chance": {
+      "type": "oneInN",
+      "n": "75No"
+    },
+    "source": "Astryx Rune",
+    "tags": [
+      "x2.5 Moonlite",
+      "x0.6 Marsite",
+      "x0.15 Venusite",
+      "+100 Rune Bulk (+500k max)"
+    ]
+  },
+  {
+    "id": "auralite",
+    "name": "Auralite",
+    "chance": {
+      "type": "oneInN",
+      "n": "1De"
+    },
+    "source": "Astryx Rune",
+    "tags": [
+      "x19 Matsite",
+      "x2.5 Venusite",
+      "x0.5 Mercuryte",
+      "x1k Tier Luck (x250k max)"
+    ]
+  },
+  {
+    "id": "nebulite",
+    "name": "Nebulite",
+    "chance": {
+      "type": "oneInN",
+      "n": "25De"
+    },
+    "source": "Astryx Rune",
+    "tags": [
+      "x15 Mercuryte",
+      "x2 Jupiterite",
+      "+7.5k Rune Bulk (+1.5m max)",
+      "x0.01 Rune Luck (x2.5 max)"
+    ]
+  },
+  {
+    "id": "orbitfall",
+    "name": "Orbitfall",
+    "chance": {
+      "type": "oneInN",
+      "n": 1
+    },
+    "source": "Vornel Rune",
+    "tags": [
+      "x0.000000000015 Dirite",
+      "x0.00000000000075 Moonlite"
+    ]
+  },
+  {
+    "id": "galaxium",
+    "name": "Galaxium",
+    "chance": {
+      "type": "oneInN",
+      "n": "500k"
+    },
+    "source": "Vornel Rune",
+    "tags": [
+      "x0.00005 Dirite",
+      "x0.0000002 Moonlite",
+      "x0.0000000025 Marsite"
+    ]
+  },
+  {
+    "id": "nova_spark",
+    "name": "Nova Spark",
+    "chance": {
+      "type": "oneInN",
+      "n": "100b"
+    },
+    "source": "Vornel Rune",
+    "tags": [
+      "x10 Dirite",
+      "x0.04 Moonlite",
+      "x0.0005 Marsite",
+      "x0.00002 Venusite"
+    ]
+  },
+  {
+    "id": "horizon",
+    "name": "Horizon",
+    "chance": {
+      "type": "oneInN",
+      "n": "25Qd"
+    },
+    "source": "Vornel Rune",
+    "tags": [
+      "x12.5k Moonlite",
+      "x150 Marsite",
+      "x7.5 Venusite",
+      "x0.3 Mercuryte"
+    ]
+  },
+  {
+    "id": "quasarlight",
+    "name": "Quasarlight",
+    "chance": {
+      "type": "oneInN",
+      "n": "350No"
+    },
+    "source": "Vornel Rune",
+    "tags": [
+      "x1m Moonlite",
+      "x15k Marsite",
+      "x750 Venusite",
+      "x100 Mecuryte"
+    ]
+  },
+  {
+    "id": "voidcore",
+    "name": "Voidcore",
+    "chance": {
+      "type": "oneInN",
+      "n": "1.25De"
+    },
+    "source": "Vornel Rune",
+    "tags": [
+      "x3k Venusite",
+      "x500 Mercuryte",
+      "x2.5 Jupiterite",
+      "+500 Rune Bulk (+250k max)"
+    ]
+  },
+  {
+    "id": "darkmatter",
+    "name": "Darkmatter",
+    "chance": {
+      "type": "oneInN",
+      "n": "5De"
+    },
+    "source": "Vornel Rune",
+    "tags": [
+      "x15k Venusite",
+      "x2k Mercuryte",
+      "x25 Jupiterite",
+      "+500 Rune Bulk (+250k max)"
+    ]
+  },
+  {
+    "id": "hypercore",
+    "name": "Hypercore",
+    "chance": {
+      "type": "oneInN",
+      "n": "25De"
+    },
+    "source": "Vornel Rune",
+    "tags": [
+      "x10k Mercuryte",
+      "x150 Jupiterite",
+      "x0.75 Saturnite",
+      "+750 Rune Bulk (+375k max)"
+    ]
+  },
+  {
+    "id": "astral_crown",
+    "name": "Astral Crown",
+    "chance": {
+      "type": "oneInN",
+      "n": "100De"
+    },
+    "source": "Vornel Rune",
+    "tags": [
+      "x750 Jupiterite",
+      "x4.5 Saturnite",
+      "x0.03 Uranite",
+      "x0.005 Rune Luck (x0.75 max)"
+    ]
+  },
+  {
+    "id": "celestium",
+    "name": "Celestium",
+    "chance": {
+      "type": "oneInN",
+      "n": "500De"
+    },
+    "source": "Vornel Rune",
+    "tags": [
+      "x0.25 Uranite",
+      "x0.005 Cosmic Points",
+      "x0.001 Light Points (x? max)",
+      "x0.01 Rune Luck (x1.5 max)"
+    ]
+  },
+  {
+    "id": "eternal_eclipse",
+    "name": "Eternal Eclipse",
+    "chance": {
+      "type": "oneInN",
+      "n": "10Ude"
+    },
+    "source": "Vornel Rune",
+    "tags": [
+      "x25k Tier Luck (x? max)",
+      "x0.02 Tier Bulk (x5 max)",
+      "+20k Rune Bulk (+5m max)",
+      "x0.02 Rune Luck (x5 max)"
+    ]
   }
 ]
