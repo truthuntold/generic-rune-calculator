@@ -1,5 +1,253 @@
 [
   {
+    "id": "common",
+    "name": "Common",
+    "chance": {
+      "type": "oneInN",
+      "n": 1.54
+    },
+    "source": "Basic Rune",
+    "tags": [
+      "x0.01 Seeds"
+    ]
+  },
+  {
+    "id": "uncommon",
+    "name": "Uncommon",
+    "chance": {
+      "type": "oneInN",
+      "n": 4
+    },
+    "source": "Basic Rune",
+    "tags": [
+      "x0.025 Seeds"
+    ]
+  },
+  {
+    "id": "rare",
+    "name": "Rare",
+    "chance": {
+      "type": "oneInN",
+      "n": 10
+    },
+    "source": "Basic Rune",
+    "tags": [
+      "x0.065 Seeds",
+      "x0.005 Plants"
+    ]
+  },
+  {
+    "id": "epic",
+    "name": "Epic",
+    "chance": {
+      "type": "oneInN",
+      "n": 100
+    },
+    "source": "Basic Rune",
+    "tags": [
+      "x0.7 Seeds",
+      "x0.025 Plants"
+    ]
+  },
+  {
+    "id": "legendary",
+    "name": "Legendary",
+    "chance": {
+      "type": "oneInN",
+      "n": "50k"
+    },
+    "source": "Basic Rune",
+    "tags": [
+      "x10 Seeds",
+      "x0.5 Plants",
+      "x0.25 Logs",
+      "x0.2 Leafs"
+    ]
+  },
+  {
+    "id": "mythic",
+    "name": "Mythic",
+    "chance": {
+      "type": "oneInN",
+      "n": "1m"
+    },
+    "source": "Basic Rune",
+    "tags": [
+      "x50 Seeds",
+      "x3 Plants",
+      "x1 Logs",
+      "x1 Leafs"
+    ]
+  },
+  {
+    "id": "secret",
+    "name": "Secret",
+    "chance": {
+      "type": "oneInN",
+      "n": "15m"
+    },
+    "source": "Basic Rune",
+    "tags": [
+      "x10 Plants",
+      "x5 Logs",
+      "x5 Leafs",
+      "x0.05 Rune Luck (x0.25 max)"
+    ]
+  },
+  {
+    "id": "garden_tree",
+    "name": "Garden Tree",
+    "chance": {
+      "type": "oneInN",
+      "n": "10Qn"
+    },
+    "source": "Basic Rune",
+    "tags": [
+      "x0.01 Rune Luck (x0.1 max)",
+      "+5 Rune Bulk (+100 max)",
+      "x50 Apples",
+      "x50M Seeds"
+    ]
+  },
+  {
+    "id": "garden_artifact",
+    "name": "Garden Artifact",
+    "chance": {
+      "type": "oneInN",
+      "n": "10Oc"
+    },
+    "source": "Basic Rune",
+    "tags": [
+      "+500 Rune bulk (+35k max)",
+      "x0.02 Rune Luck (0.5x max)",
+      "x2Qd Boss shards",
+      "x2Qn Boss damage"
+    ]
+  },
+  {
+    "id": "cold",
+    "name": "Cold",
+    "chance": {
+      "type": "oneInN",
+      "n": 1.54
+    },
+    "source": "Frost Rune",
+    "tags": [
+      "x0.001 Leafs"
+    ]
+  },
+  {
+    "id": "igloo",
+    "name": "Igloo",
+    "chance": {
+      "type": "oneInN",
+      "n": 4.44
+    },
+    "source": "Frost Rune",
+    "tags": [
+      "x0.0005 Snow"
+    ]
+  },
+  {
+    "id": "snowboard",
+    "name": "Snowboard",
+    "chance": {
+      "type": "oneInN",
+      "n": 8
+    },
+    "source": "Frost Rune",
+    "tags": [
+      "x0.0025 Snow"
+    ]
+  },
+  {
+    "id": "snowstorm",
+    "name": "Snowstorm",
+    "chance": {
+      "type": "oneInN",
+      "n": "1k"
+    },
+    "source": "Frost Rune",
+    "tags": [
+      "x0.25 Snow",
+      "x0.05 Ice"
+    ]
+  },
+  {
+    "id": "snowdemon",
+    "name": "Snowdemon",
+    "chance": {
+      "type": "oneInN",
+      "n": "100k"
+    },
+    "source": "Frost Rune",
+    "tags": [
+      "x3 Snow",
+      "x0.5 Ice",
+      "x0.02 Boss Damage"
+    ]
+  },
+  {
+    "id": "yeti",
+    "name": "Yeti",
+    "chance": {
+      "type": "oneInN",
+      "n": "5m"
+    },
+    "source": "Frost Rune",
+    "tags": [
+      "x7 Snow",
+      "x1.5 Ice",
+      "x0.1 Boss Shards",
+      "x0.2 Boss Damage"
+    ]
+  },
+  {
+    "id": "ice_dragon",
+    "name": "Ice Dragon",
+    "chance": {
+      "type": "oneInN",
+      "n": "25m"
+    },
+    "source": "Frost Rune",
+    "tags": [
+      "x25 Snow",
+      "x5 Ice",
+      "x15 Leafs",
+      "x0.1 Tier Luck (Max x2)"
+    ]
+  },
+  {
+    "id": "ragnarok",
+    "name": "Ragnarok",
+    "chance": {
+      "type": "oneInN",
+      "n": "500m"
+    },
+    "source": "Frost Rune",
+    "tags": [
+      "x150 Snow",
+      "+1 Passive Shards (+1 max)",
+      "x1.5 Boss Shards",
+      "x0.25 Rune Luck (x1.5 max)"
+    ]
+  },
+  {
+    "id": "frozen_core",
+    "name": "Frozen Core",
+    "chance": {
+      "type": "oneInN",
+      "n": "17.5Qn"
+    },
+    "source": "Frost Rune",
+    "tags": [
+      "x25 Tier Luck (x250 max)",
+      "+20 Tier Bulk (+200 max)",
+      "+1 Passive Shards (+4 max)",
+      "x100m Boss Damage"
+    ]
+  },
+  {
     "id": "aridic",
     "name": "Aridic",
     "chance": {
@@ -88,7 +336,7 @@
     "tags": [
       "x7.5 Sand",
       "x2.5 Fossils",
-      "x1 Better points (x1 max)",
+      "x1 Better Points (x1 max)",
       "x0.2 Oil"
     ]
   },
@@ -97,14 +345,14 @@
     "name": "Sun God",
     "chance": {
       "type": "oneInN",
-      "n": "50b"
+      "n": "50B"
     },
     "source": "Sun Rune",
     "tags": [
       "x5 Oil",
-      "x2 Better points (x10 max)",
-      "x5 Tier luck (x20 max)",
-      "x0.5 Rune luck (x2 max)"
+      "x2 Better Points (x10 max)",
+      "x5 Tier Luck (x20 max)",
+      "x0.5 Rune Luck (x2 max)"
     ]
   },
   {
@@ -112,14 +360,280 @@
     "name": "Temple God",
     "chance": {
       "type": "oneInN",
-      "n": "25qn"
+      "n": "25Qn"
     },
     "source": "Sun Rune",
     "tags": [
-      "x0.25 Rune luck (max 1x)",
+      "x0.02 Rune Luck (x0.2 max)",
       "+25 Rune Bulk (+500 max)",
-      "x5 Tier Luck (x25 max)",
+      "x5 Tier Luck (x75 max)",
       "+25 Tier Bulk (+250 max)"
+    ]
+  },
+  {
+    "id": "glimmer",
+    "name": "Glimmer",
+    "chance": {
+      "type": "oneInN",
+      "n": 1.25
+    },
+    "source": "Tunnel Rune",
+    "tags": [
+      "x0.0000025 Stone"
+    ]
+  },
+  {
+    "id": "hollow",
+    "name": "Hollow",
+    "chance": {
+      "type": "oneInN",
+      "n": 6.67
+    },
+    "source": "Tunnel Rune",
+    "tags": [
+      "x0.000005 Coal"
+    ]
+  },
+  {
+    "id": "lumen",
+    "name": "Lumen",
+    "chance": {
+      "type": "oneInN",
+      "n": 25
+    },
+    "source": "Tunnel Rune",
+    "tags": [
+      "x0.000015 Clay"
+    ]
+  },
+  {
+    "id": "vault",
+    "name": "Vault",
+    "chance": {
+      "type": "oneInN",
+      "n": 200
+    },
+    "source": "Tunnel Rune",
+    "tags": [
+      "x0.0001 Limestone"
+    ]
+  },
+  {
+    "id": "ironveil",
+    "name": "Ironveil",
+    "chance": {
+      "type": "oneInN",
+      "n": "2.5m"
+    },
+    "source": "Tunnel Rune",
+    "tags": [
+      "x0.00001 Granite"
+    ]
+  },
+  {
+    "id": "abyssal",
+    "name": "Abyssal",
+    "chance": {
+      "type": "oneInN",
+      "n": "25B"
+    },
+    "source": "Tunnel Rune",
+    "tags": [
+      "x0.075 Sandstone",
+      "x0.005 Cash"
+    ]
+  },
+  {
+    "id": "eclipse",
+    "name": "Eclipse",
+    "chance": {
+      "type": "oneInN",
+      "n": "100B"
+    },
+    "source": "Tunnel Rune",
+    "tags": [
+      "x0.25 Iron",
+      "x0.1 Copper",
+      "x0.1 Dust",
+      "+2 Rune Bulk (+10 max)"
+    ]
+  },
+  {
+    "id": "eternis",
+    "name": "Eternis",
+    "chance": {
+      "type": "oneInN",
+      "n": "1T"
+    },
+    "source": "Tunnel Rune",
+    "tags": [
+      "3x Tin",
+      "1x Salt",
+      "5x Tier Luck (20x max)",
+      "x0.05 Rune Luck (x0.25 max)"
+    ]
+  },
+  {
+    "id": "eternal_gateway",
+    "name": "Eternal Gateway",
+    "chance": {
+      "type": "oneInN",
+      "n": "35Qn"
+    },
+    "source": "Tunnel Rune",
+    "tags": [
+      "x0.02 Rune Luck (x0.25 max)",
+      "+5 Rune Bulk (+100 max)",
+      "x2.5 Tier Luck (x50 max)",
+      "+5 Tier Bulk (+150 max)"
+    ]
+  },
+  {
+    "id": "unstable_gateway",
+    "name": "Unstable Gateway",
+    "chance": {
+      "type": "oneInN",
+      "n": "5No"
+    },
+    "source": "Tunnel Rune",
+    "tags": [
+      "x25k Bramite",
+      "x10k Ardenite",
+      "x0.02 Rune Luck (x0.5 max)",
+      "+1k Rune Bulk (+100k max)"
+    ]
+  },
+  {
+    "id": "drift",
+    "name": "Drift",
+    "chance": {
+      "type": "oneInN",
+      "n": 1.18
+    },
+    "source": "Cavern Rune",
+    "tags": [
+      "x0.0000025 Zinc"
+    ]
+  },
+  {
+    "id": "chasm",
+    "name": "Chasm",
+    "chance": {
+      "type": "oneInN",
+      "n": 8
+    },
+    "source": "Cavern Rune",
+    "tags": [
+      "x0.000005 Lead"
+    ]
+  },
+  {
+    "id": "grotto",
+    "name": "Grotto",
+    "chance": {
+      "type": "oneInN",
+      "n": 50
+    },
+    "source": "Cavern Rune",
+    "tags": [
+      "x0.000015 Nickel"
+    ]
+  },
+  {
+    "id": "echoes",
+    "name": "Echoes",
+    "chance": {
+      "type": "oneInN",
+      "n": 400
+    },
+    "source": "Cavern Rune",
+    "tags": [
+      "x0.0001 Cobalt"
+    ]
+  },
+  {
+    "id": "stoneveil",
+    "name": "Stoneveil",
+    "chance": {
+      "type": "oneInN",
+      "n": "25m"
+    },
+    "source": "Cavern Rune",
+    "tags": [
+      "x0.00001 Aluminum"
+    ]
+  },
+  {
+    "id": "netherdeep",
+    "name": "Netherdeep",
+    "chance": {
+      "type": "oneInN",
+      "n": "100B"
+    },
+    "source": "Cavern Rune",
+    "tags": [
+      "x0.075 Silver",
+      "x0.01 Cash"
+    ]
+  },
+  {
+    "id": "oblivion",
+    "name": "Oblivion",
+    "chance": {
+      "type": "oneInN",
+      "n": "1T"
+    },
+    "source": "Cavern Rune",
+    "tags": [
+      "x0.25 Manganese",
+      "x0.1 Uranium",
+      "x0.25 Dust",
+      "+4 Rune Bulk (+20 max)"
+    ]
+  },
+  {
+    "id": "voidspire",
+    "name": "Voidspire",
+    "chance": {
+      "type": "oneInN",
+      "n": "10t"
+    },
+    "source": "Cavern Rune",
+    "tags": [
+      "x3 Titanium",
+      "x1 Chromium",
+      "x10 Tier Luck (x50 max)",
+      "x0.1 Rune Luck (x0.5 max)"
+    ]
+  },
+  {
+    "id": "deepest_depths",
+    "name": "Deepest Depths",
+    "chance": {
+      "type": "oneInN",
+      "n": "55Qn"
+    },
+    "source": "Cavern Rune",
+    "tags": [
+      "x0.02 Rune Luck (x0.3 max)",
+      "+10 Rune Bulk (+150 max)",
+      "x10 Tier Luck (x150 max)",
+      "x50k Lead"
+    ]
+  },
+  {
+    "id": "darkest_depths",
+    "name": "Darkest Depths",
+    "chance": {
+      "type": "oneInN",
+      "n": "10No"
+    },
+    "source": "Cavern Rune",
+    "tags": [
+      "x5k Graphite",
+      "x2.5k Flamerite",
+      "x0.02 Rune Luck (x0.5 max)",
+      "+2k Rune Bulk (+200k max)"
     ]
   },
   {
@@ -260,43 +774,13 @@
     ]
   },
   {
-    "id": "garden_tree",
-    "name": "Garden Tree",
+    "id": "nexus_entity",
+    "name": "Nexus Entity",
     "chance": {
       "type": "oneInN",
-      "n": "10Qn"
+      "n": "125Qn"
     },
-    "source": "Basic Rune",
-    "tags": []
-  },
-  {
-    "id": "frozen_core",
-    "name": "Frozen Core",
-    "chance": {
-      "type": "oneInN",
-      "n": "17.5Qn"
-    },
-    "source": "Frost Rune",
-    "tags": []
-  },
-  {
-    "id": "eternal_gateway",
-    "name": "Eternal Gateway",
-    "chance": {
-      "type": "oneInN",
-      "n": "35Qn"
-    },
-    "source": "Tunnel Rune",
-    "tags": []
-  },
-  {
-    "id": "deepest_depths",
-    "name": "Deepest Depths",
-    "chance": {
-      "type": "oneInN",
-      "n": "55Qn"
-    },
-    "source": "Cavern Rune",
+    "source": "Energy Rune",
     "tags": []
   },
   {
@@ -307,16 +791,6 @@
       "n": "75Qn"
     },
     "source": "Lantern Rune",
-    "tags": []
-  },
-  {
-    "id": "nexus_entity",
-    "name": "Nexus Entity",
-    "chance": {
-      "type": "oneInN",
-      "n": "125Qn"
-    },
-    "source": "Energy Rune",
     "tags": []
   }
 ]

@@ -1,5 +1,5 @@
 {
-    "displayName": "Sample (Derived RPS)",
+    "displayName": "Garden Incremental Rune Calculator",
     "rpsMode": "derived",
     "speedInput": "secondsPerOpen",
     "labels": {

@@ -346,9 +346,9 @@ export function GenericRunePanel({ runes, scales, config }: GenericRunePanelProp
                     whileHover={{ y: -4 }}
                     className={`glass-panel group overflow-hidden ${viewMode === 'list' ? 'flex items-center p-4' : 'flex flex-col'}`}
                   >
-                    <div className={viewMode === 'list' ? 'flex-1 grid grid-cols-4 items-center gap-4' : 'p-6 flex-1'}>
+                    <div className={viewMode === 'list' ? 'flex-1 grid grid-cols-12 items-center gap-6' : 'p-6 flex-1'}>
                       {/* Name & Source */}
-                      <div className={viewMode === 'list' ? 'col-span-1' : 'mb-4'}>
+                      <div className={viewMode === 'list' ? 'col-span-4' : 'mb-4'}>
                         <div className="flex items-center justify-between">
                           <h3 className="text-xl font-bold text-white group-hover:text-brand-400 transition-colors">
                             {rune.name}
@@ -364,10 +364,10 @@ export function GenericRunePanel({ runes, scales, config }: GenericRunePanelProp
                       </div>
 
                       {/* Stats */}
-                      <div className={viewMode === 'list' ? 'col-span-1' : 'grid grid-cols-2 gap-4 mb-6 pt-4 border-t border-slate-800'}>
+                      <div className={viewMode === 'list' ? 'col-span-3' : 'grid grid-cols-2 gap-4 mb-6 pt-4 border-t border-slate-800'}>
                         <div>
                           <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500 mb-1">Chance</p>
-                          <p className="font-mono font-medium text-slate-200">1 in {rune.chance.n}</p>
+                          <p className="font-mono font-medium text-slate-200 whitespace-nowrap">1 in {rune.chance.n}</p>
                         </div>
                         <div className={viewMode === 'list' ? 'hidden' : ''}>
                           <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500 mb-1">ETA</p>
@@ -379,25 +379,30 @@ export function GenericRunePanel({ runes, scales, config }: GenericRunePanelProp
 
                       {/* List View ETA */}
                       {viewMode === 'list' && (
-                        <div className="col-span-1">
-                          <p className={`font-mono font-bold ${getEtaColor(rune.eta)}`}>
+                        <div className="col-span-2">
+                          <p className={`font-mono font-bold text-lg ${getEtaColor(rune.eta)}`}>
                             {formatTimeHuman(rune.eta)}
                           </p>
                         </div>
                       )}
 
                       {/* Tags */}
-                      <div className={viewMode === 'list' ? 'col-span-1 flex justify-end' : 'mt-auto flex flex-wrap gap-2 pt-4'}>
+                      <div className={viewMode === 'list' ? 'col-span-3 flex flex-col gap-1.5 items-end' : 'mt-auto flex flex-wrap gap-2 pt-4'}>
                         {rune.tags?.map(tag => (
                           <span
                             key={tag}
-                            className="px-2 py-1 rounded-md bg-slate-800 text-[10px] font-bold text-slate-400 uppercase tracking-tight border border-slate-700/50"
+                            className={`
+                              ${viewMode === 'list'
+                                ? 'px-3 py-1.5 bg-slate-800/40 border-slate-700/30 text-slate-300 w-full max-w-[220px] text-right shadow-sm hover:bg-slate-700/40'
+                                : 'px-2 py-1 bg-slate-900/50 border-slate-800 text-slate-400'}
+                              rounded-md border text-[10px] font-bold uppercase tracking-wider transition-all cursor-default
+                            `}
                           >
                             {tag}
                           </span>
                         ))}
                         {(!rune.tags || rune.tags.length === 0) && viewMode !== 'list' && (
-                          <span className="text-xs text-slate-600 italic">No modifiers</span>
+                          <span className="text-xs text-slate-600 italic">Modifiers not added yet</span>
                         )}
                       </div>
                     </div>

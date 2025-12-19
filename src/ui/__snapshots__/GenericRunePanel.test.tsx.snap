@@ -524,7 +524,7 @@ exports[`GenericRunePanel > matches snapshot 1`] = `
                       Chance
                     </p>
                     <p
-                      class="font-mono font-medium text-slate-200"
+                      class="font-mono font-medium text-slate-200 whitespace-nowrap"
                     >
                       1 in 100
                     </p>
@@ -615,7 +615,7 @@ exports[`GenericRunePanel > matches snapshot 1`] = `
                       Chance
                     </p>
                     <p
-                      class="font-mono font-medium text-slate-200"
+                      class="font-mono font-medium text-slate-200 whitespace-nowrap"
                     >
                       1 in 1000
                     </p>
@@ -729,7 +729,7 @@ exports[`GenericRunePanel > matches snapshot 1`] = `
                       Chance
                     </p>
                     <p
-                      class="font-mono font-medium text-slate-200"
+                      class="font-mono font-medium text-slate-200 whitespace-nowrap"
                     >
                       1 in 10000
                     </p>
@@ -753,7 +753,10 @@ exports[`GenericRunePanel > matches snapshot 1`] = `
                   class="mt-auto flex flex-wrap gap-2 pt-4"
                 >
                   <span
-                    class="px-2 py-1 rounded-md bg-slate-800 text-[10px] font-bold text-slate-400 uppercase tracking-tight border border-slate-700/50"
+                    class="
+                              px-2 py-1 bg-slate-900/50 border-slate-800 text-slate-400
+                              rounded-md border text-[10px] font-bold uppercase tracking-wider transition-all cursor-default
+                            "
                   >
                     secret
                   </span>
