@@ -9,11 +9,8 @@ import {
   Sparkles,
   Zap,
   ShieldAlert,
-  ChevronDown,
   LayoutGrid,
   List,
-  Eye,
-  EyeOff,
   Info
 } from "lucide-react";
 import { effectiveBaseRps, etaSeconds, oneInNToNumber, shouldApplyLuck } from "../core/engine";
