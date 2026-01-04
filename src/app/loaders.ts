@@ -26,9 +26,13 @@ export interface RuneRecord {
     tags?: string[];     // e.g., ["secret"], ["noluck"]
 }
 
-const RUNES_URL = import.meta.env.VITE_RUNES_URL || '/runes.json';
-const SCALES_URL = import.meta.env.VITE_SCALES_URL || '/scales.json';
-const GAME_CONFIG_URL = import.meta.env.VITE_GAME_CONFIG_URL || '/game.config.json';
+const BASE_PATH = import.meta.env.BASE_URL.endsWith('/')
+    ? import.meta.env.BASE_URL
+    : import.meta.env.BASE_URL + '/';
+
+const RUNES_URL = import.meta.env.VITE_RUNES_URL || `${BASE_PATH}runes.json`;
+const SCALES_URL = import.meta.env.VITE_SCALES_URL || `${BASE_PATH}scales.json`;
+const GAME_CONFIG_URL = import.meta.env.VITE_GAME_CONFIG_URL || `${BASE_PATH}game.config.json`;
 
 const ajv = new Ajv();
 
