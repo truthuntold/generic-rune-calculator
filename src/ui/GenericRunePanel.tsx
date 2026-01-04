@@ -61,9 +61,20 @@ export function GenericRunePanel({ runes, scales, config }: GenericRunePanelProp
   const [sortField, setSortField] = useState<string>('chance');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [customChance, setCustomChance] = useState('');
 
   const baseRps = effectiveBaseRps({ rps, speed, bulk }, config.rpsMode, scales, config.speedInput);
   const luckValue = parseScaled(luck, scales).value;
+
+  const customChanceData = useMemo(() => {
+    if (!customChance) return null;
+    return parseScaled(customChance, scales);
+  }, [customChance, scales]);
+
+  const customEta = useMemo(() => {
+    if (!customChanceData || customChanceData.value <= 0) return null;
+    return etaSeconds(customChanceData.value, baseRps, luckValue, true);
+  }, [customChanceData, baseRps, luckValue]);
 
   const handleSort = (field: string) => {
     if (sortField === field) {
@@ -222,6 +233,39 @@ export function GenericRunePanel({ runes, scales, config }: GenericRunePanelProp
                     <Sparkles className="absolute right-3 top-2.5 w-4 h-4 text-brand-400" />
                   </div>
                 </div>
+              </div>
+
+              <div className="pt-6 border-t border-slate-800 space-y-4">
+                <h2 className="text-xl font-bold text-white flex items-center gap-2">
+                  <Clock className="w-5 h-5 text-indigo-400" />
+                  Custom Calc
+                </h2>
+                <div className="space-y-1.5">
+                  <label htmlFor="customChance" className="text-sm font-semibold text-slate-400">1 in X (e.g. 25Qd, 1e10)</label>
+                  <input
+                    type="text"
+                    id="customChance"
+                    value={customChance}
+                    onChange={e => setCustomChance(e.target.value)}
+                    className="input-field w-full px-3 py-2"
+                    placeholder="Enter value..."
+                  />
+                </div>
+                {customEta !== null && customChanceData !== null && customChanceData.value > 0 && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    className="p-3 bg-brand-500/10 rounded-lg border border-brand-500/20"
+                  >
+                    <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500 mb-1">Estimated Time</p>
+                    <p className={`font-mono font-bold text-xl ${getEtaColor(customEta)}`}>
+                      {formatEtaDisplay(customEta)}
+                    </p>
+                    {customChanceData.warning && (
+                      <p className="text-[10px] text-rose-400 mt-1 italic">{customChanceData.warning}</p>
+                    )}
+                  </motion.div>
+                )}
               </div>
 
               <div className="pt-6 border-t border-slate-800 space-y-4">
