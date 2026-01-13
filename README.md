@@ -118,3 +118,25 @@ To use a different config file, you can use the `VITE_GAME_CONFIG_URL` environme
 ```bash
 npm run dev -- --env.VITE_GAME_CONFIG_URL=/game.config.derived.json
 ```
+
+## Syncing runes from Trello
+
+This repo includes a small script that pulls raw rune lines from Trello cards and merges them into [`public/runes.json`](public/runes.json).
+
+- The script processes **only cards between** the marker cards named **“Main”** and **“Shop”** (markers themselves are excluded).
+- For each processed card, it sets `source` to `${card.name} Rune` (e.g. `Energy` → `Energy Rune`).
+- Existing runes are updated in-place; new runes are appended. The script does **not** reorder the file.
+
+### Run (dry-run first)
+
+```bash
+# Summary only (does not write)
+npm run sync:trello-runes -- --dry-run
+
+# Write updates into public/runes.json and validate it against schemas/runes.schema.json
+npm run sync:trello-runes
+
+# Offline mode (use the saved API response)
+npm run sync:trello-runes -- --input scripts/data/trello_example.json --dry-run
+```
+

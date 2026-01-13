@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "test": "vitest",
     "test:watch": "vitest --watch",
-    "validate:data": "node scripts/validate-data.mjs"
+    "validate:data": "node scripts/validate-data.mjs",
+    "sync:trello-runes": "node scripts/sync-trello-runes.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.23.26",

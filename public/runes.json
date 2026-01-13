@@ -1463,7 +1463,7 @@
     "tags": [
       "x0.25 Uranite",
       "x0.005 Cosmic Points",
-      "x0.001 Light Points (x? max)",
+      "x0.001 Light Points",
       "x0.01 Rune Luck (x1.5 max)"
     ]
   },
@@ -1476,10 +1476,172 @@
     },
     "source": "Vornel Rune",
     "tags": [
-      "x25k Tier Luck (x? max)",
+      "x25k Tier Luck (x10b max)",
       "x0.02 Tier Bulk (x5 max)",
       "+20k Rune Bulk (+5m max)",
       "x0.02 Rune Luck (x5 max)"
     ]
-  }
+  },
+  {
+    "id": "subzero",
+    "name": "Subzero",
+    "chance": {
+      "type": "oneInN",
+      "n": "450Ude"
+    },
+    "source": "Frost Rune",
+    "tags": [
+      "+20k Rune Bulk (+5m max)",
+      "x0.01 Rune Luck (x2 max)",
+      "x0.03 Tier Bulk (x7.5 max)",
+      "x2.5M Tier Luck (x? max)"
+    ]
+  },
+  {
+    "id": "the_deepest_sea",
+    "name": "The Deepest Sea",
+    "chance": {
+      "type": "oneInN",
+      "n": "20Oc"
+    },
+    "source": "Waves Rune",
+    "tags": [
+      "x0.05 Rune Luck (x1 max)",
+      "+500 Rune Bulk (+25k max)",
+      "x75 Tier Luck (x4.5k max)",
+      "x5 Mythical Fish"
+    ]
+  },
+  {
+    "id": "the_darkest_sea",
+    "name": "The Darkest Sea",
+    "chance": {
+      "type": "oneInN",
+      "n": "750Ude"
+    },
+    "source": "Waves Rune",
+    "tags": [
+      "x0.005 Fisher XP (x100 max)",
+      "x5Qd Legendary Fish",
+      "x500b Mythical Fish",
+      "x0.001 Multi Fish (x2.5 max)"
+    ]
+  },
+  {
+    "id": "faded",
+    "name": "Faded",
+    "chance": {
+      "type": "oneInN",
+      "n": 1
+    },
+    "source": "Heavenly Rune",
+    "tags": [
+      "x0.000000000000000000005 Grace"
+    ]
+  },
+  {
+    "id": "blesed",
+    "name": "Blesed",
+    "chance": {
+      "type": "oneInN",
+      "n": "2m"
+    },
+    "source": "Heavenly Rune",
+    "tags": [
+      "x0.00000000000000525 Grace"
+    ]
+  },
+  {
+    "id": "hallowed",
+    "name": "Hallowed",
+    "chance": {
+      "type": "oneInN",
+      "n": "4t"
+    },
+    "source": "Heavenly Rune",
+    "tags": [
+      "x0.000000011 Grace"
+    ]
+  },
+  {
+    "id": "radiantly",
+    "name": "Radiantly",
+    "chance": {
+      "type": "oneInN",
+      "n": "7.5Qn"
+    },
+    "source": "Heavenly Rune",
+    "tags": [
+      "x0.0335 Grace"
+    ]
+  },
+  {
+    "id": "anglelic",
+    "name": "Anglelic",
+    "chance": {
+      "type": "oneInN",
+      "n": "75UDe"
+    },
+    "source": "Heavenly Rune",
+    "tags": [
+      "x1.5 Grace"
+    ]
+  },
+  {
+    "id": "seraphic",
+    "name": "Seraphic",
+    "chance": {
+      "type": "oneInN",
+      "n": "600UDe"
+    },
+    "source": "Heavenly Rune",
+    "tags": [
+      "x12.5 Grace",
+      "x0.5 Glory"
+    ]
+  },
+  {
+    "id": "empyrean",
+    "name": "Empyrean",
+    "chance": {
+      "type": "oneInN",
+      "n": "5DDe"
+    },
+    "source": "Heavenly Rune",
+    "tags": [
+      "x111 Grace",
+      "x4.26 Glory",
+      "x0.175 Divinity"
+    ]
+  },
+  {
+    "id": "celestial",
+    "name": "Celestial",
+    "chance": {
+      "type": "oneInN",
+      "n": "42.5DDe"
+    },
+    "source": "Heavenly Rune",
+    "tags": [
+      "x37.5 Glory",
+      "x1.5 Divinity",
+      "x0.45 Heaven Points",
+      "+25k Rune Bulk"
+    ]
+  },
+    {
+      "id": "absolute_divinity",
+      "name": "Absolute Divinity",
+      "chance": {
+        "type": "oneInN",
+        "n": "10TDe"
+      },
+      "source": "Heavenly Rune",
+      "tags": [
+        "x2.5b Tier Luck",
+        "x0.1 Tier Bulk",
+        "x0.03 Rune Luck",
+        "+80k Rune Bulk"
+      ]
+    }
 ]
