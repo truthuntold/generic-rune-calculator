@@ -1626,7 +1626,7 @@
       "x37.5 Glory",
       "x1.5 Divinity",
       "x0.45 Heaven Points",
-      "+25k Rune Bulk"
+      "+25k Rune Bulk (+5m Max)"
     ]
   },
   {
@@ -1641,7 +1641,7 @@
       "x350 Glory",
       "x13.5 Divinity",
       "x5 Heaven Points",
-      "x0.01 Rune Luck"
+      "x0.01 Rune Luck (x2 max)"
     ]
   },
   {
@@ -1654,9 +1654,147 @@
     "source": "Heavenly Rune",
     "tags": [
       "x2.5b Tier Luck",
-      "x0.1 Tier Bulk",
-      "x0.03 Rune Luck",
-      "+80k Rune Bulk"
+      "x0.1 Tier Bulk (x25 max)",
+      "x0.03 Rune Luck (x7.5 Rune Luck)",
+      "+80k Rune Bulk (+20m Rune Bulk)"
+    ]
+  },
+  {
+    "id": "wormhole",
+    "name": "Wormhole",
+    "chance": {
+      "type": "oneInN",
+      "n": 1
+    },
+    "source": "Starlight Rune",
+    "tags": [
+      "x150t Dirtite",
+      "x22.5m Moonlite",
+      "x37.5 Marsite"
+    ]
+  },
+  {
+    "id": "sunlight",
+    "name": "Sunlight",
+    "chance": {
+      "type": "oneInN",
+      "n": "1m"
+    },
+    "source": "Starlight Rune",
+    "tags": [
+      "x100Qn Dirtite",
+      "x13.5t Moonlite",
+      "x21.5m Marsite",
+      "x200 Venusite"
+    ]
+  },
+  {
+    "id": "universal",
+    "name": "Universal",
+    "chance": {
+      "type": "oneInN",
+      "n": "1t"
+    },
+    "source": "Starlight Rune",
+    "tags": [
+      "x100Sp Dirtite",
+      "x13.5Qn Moonlite",
+      "x21.5t Marsite",
+      "x200m Venusite"
+    ]
+  },
+  {
+    "id": "alien",
+    "name": "Alien",
+    "chance": {
+      "type": "oneInN",
+      "n": "250qd"
+    },
+    "source": "Starlight Rune",
+    "tags": [
+      "x5Sp Moonlite",
+      "x8Qn Marsite",
+      "x80t Venusite",
+      "x9b Mecuryte"
+    ]
+  },
+  {
+    "id": "lightyear",
+    "name": "Lightyear",
+    "chance": {
+      "type": "oneInN",
+      "n": "10De"
+    },
+    "source": "Starlight Rune",
+    "tags": [
+      "x2Qn Marsite",
+      "x18.5t Venusite",
+      "x1.75b Mercuryte",
+      "x250k Jupiterite",
+      "x300t Venusite",
+      "x27.5b Mercuryte",
+      "x4m Jupiterite",
+      "x1.5k Saturnite"
+    ]
+  },
+  {
+    "id": "ultranova",
+    "name": "Ultranova",
+    "chance": {
+      "type": "oneInN",
+      "n": "2.5UDe"
+    },
+    "source": "Starlight Rune",
+    "tags": [
+      "x500b Mercuryte",
+      "x70m Jupiterite",
+      "x25k Saturnite",
+      "x25 Uranite"
+    ]
+  },
+  {
+    "id": "neutron_star",
+    "name": "Neutron Star",
+    "chance": {
+      "type": "oneInN",
+      "n": "35UDe"
+    },
+    "source": "Starlight Rune",
+    "tags": [
+      "x1b Jupiterite",
+      "x350k Saturnite",
+      "x350 Uranite",
+      "x0.35 Neptunite"
+    ]
+  },
+  {
+    "id": "intergalactic",
+    "name": "Intergalactic",
+    "chance": {
+      "type": "oneInN",
+      "n": "500UDe"
+    },
+    "source": "Starlight Rune",
+    "tags": [
+      "x5m Saturnite",
+      "x5k Uranite",
+      "x5 Neptunite",
+      "x0.0005 Plutite"
+    ]
+  },
+  {
+    "id": "the_unknown",
+    "name": "The Unknown",
+    "chance": {
+      "type": "oneInN",
+      "n": "25DDe"
+    },
+    "source": "Starlight Rune",
+    "tags": [
+      "x500 Neptunite",
+      "x0.05 Plutite",
+      "x200 Light Points",
+      "x1k Cosmic Points"
     ]
   }
 ]

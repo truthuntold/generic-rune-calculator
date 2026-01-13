@@ -66,8 +66,11 @@ export function parseRuneLine(line) {
     const text = String(line || '').trim();
     if (!text) return null;
 
-    // Allow hyphen, en dash, em dash.
-    const re = /^(?<name>.+?)\s+1\/(?<n>[^\s]+)\s+[–—-]\s+(?<effects>.+)$/;
+    // Allow:
+    // - "Name 1/25B - x..." (hyphen/en dash/em dash)
+    // - "Name 1/25DDe | x..." (some Trello lines omit the dash and start effects with a pipe)
+    // We keep this fairly strict so we don't accidentally parse non-rune lines.
+    const re = /^(?<name>.+?)\s+1\/(?<n>[^\s]+)\s*(?:[–—-]\s*)?(?<effects>(?:\|\s*)?.+)$/;
     const m = text.match(re);
     if (!m?.groups) return null;
 

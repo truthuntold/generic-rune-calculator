@@ -45,6 +45,14 @@ describe('sync-trello-runes-lib', () => {
     expect(parsed.tags).toEqual(['x0.01 Seeds']);
   });
 
+  it('parseRuneLine supports lines without dash (effects start with |)', () => {
+    const parsed = parseRuneLine('The Unknown 1/25DDe | x500 Neptunite | x0.05 Plutite');
+    expect(parsed).not.toBeNull();
+    expect(parsed.name).toBe('The Unknown');
+    expect(parsed.chance).toEqual({ type: 'oneInN', n: '25DDe' });
+    expect(parsed.tags).toEqual(['x500 Neptunite', 'x0.05 Plutite']);
+  });
+
   it('splitTags handles comma-delimited effects used as delimiters', () => {
     const tags = splitTags('x75 Cookies, x0.75 Santa Damage, +1 Christmas Bulk (+25 max)');
     expect(tags).toEqual(['x75 Cookies', 'x0.75 Santa Damage', '+1 Christmas Bulk (+25 max)']);

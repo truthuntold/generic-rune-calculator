@@ -861,7 +861,7 @@
             "checkItemsChecked": 0,
             "checkItemsEarliestDue": null,
             "comments": 0,
-            "description": false,
+            "description": true,
             "due": null,
             "dueComplete": false,
             "lastUpdatedByAi": false,
@@ -882,8 +882,8 @@
         "checkItemStates": [],
         "closed": false,
         "dueComplete": false,
-        "dateLastActivity": "2026-01-12T10:09:53.053Z",
-        "desc": "",
+        "dateLastActivity": "2026-01-13T06:46:43.956Z",
+        "desc": "Wormhole 1/1 - x150t Dirtite | x22.5m Moonlite | x37.5 Marsite\nSunlight 1/1m - x100Qn Dirtite | x13.5t Moonlite | x21.5m Marsite | x200 Venusite\nUniversal 1/1t - x100Sp Dirtite | x13.5Qn Moonlite | x21.5t Marsite | x200m Venusite\nAlien 1/250qd - x5Sp Moonlite | x8Qn Marsite | x80t Venusite | x9b Mecuryte\nLightyear 1/10De - x2Qn Marsite | x18.5t Venusite | x1.75b Mercuryte | x250k Jupiterite | x300t Venusite | x27.5b Mercuryte | x4m Jupiterite | x1.5k Saturnite\nUltranova 1/2.5UDe - x500b Mercuryte | x70m Jupiterite | x25k Saturnite | x25 Uranite\nNeutron Star 1/35UDe - x1b Jupiterite | x350k Saturnite | x350 Uranite | x0.35 Neptunite\nIntergalactic 1/500UDe - x5m Saturnite | x5k Uranite | x5 Neptunite | x0.0005 Plutite\nThe Unknown 1/25DDe | x500 Neptunite | x0.05 Plutite | x200 Light Points | x1k Cosmic Points",
         "descData": {
             "emoji": {}
         },
@@ -953,8 +953,8 @@
         "checkItemStates": [],
         "closed": false,
         "dueComplete": false,
-        "dateLastActivity": "2026-01-12T10:42:17.547Z",
-        "desc": "Faded 1/1 - x0.000000000000000000005 Grace\nBlesed 1/2m - x0.00000000000000525 Grace\nHallowed 1/4t - x0.000000011 Grace\nRadiantly 1/7.5Qn - x0.0335 Grace\nAnglelic 1/75UDe - x1.5 Grace\nSeraphic 1/600UDe - x12.5 Grace | x0.5 Glory\nEmpyrean 1/5DDe - x111 Grace | x4.26 Glory | x0.175 Divinity\nCelestial 1/42.5DDe - x37.5 Glory | x1.5 Divinity | x0.45 Heaven Points | +25k Rune Bulk",
+        "dateLastActivity": "2026-01-13T06:39:26.620Z",
+        "desc": "Faded 1/1 - x0.000000000000000000005 Grace\nBlesed 1/2m - x0.00000000000000525 Grace\nHallowed 1/4t - x0.000000011 Grace\nRadiantly 1/7.5Qn - x0.0335 Grace\nAnglelic 1/75UDe - x1.5 Grace\nSeraphic 1/600UDe - x12.5 Grace | x0.5 Glory\nEmpyrean 1/5DDe - x111 Grace | x4.26 Glory | x0.175 Divinity\nCelestial 1/42.5DDe - x37.5 Glory | x1.5 Divinity | x0.45 Heaven Points | +25k Rune Bulk (+5m Max)\nAscended 1/350DDe - x350 Glory | x13.5 Divinity | x5 Heaven Points | x0.01 Rune Luck (x2 max)\nAbsolute Divinity 1/10TDe - x2.5b Tier Luck | x0.1 Tier Bulk (x25 max) | x0.03 Rune Luck (x7.5 Rune Luck) | +80k Rune Bulk (+20m Rune Bulk)",
         "descData": {
             "emoji": {}
         },
