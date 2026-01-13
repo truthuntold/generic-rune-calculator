@@ -1629,19 +1629,34 @@
       "+25k Rune Bulk"
     ]
   },
-    {
-      "id": "absolute_divinity",
-      "name": "Absolute Divinity",
-      "chance": {
-        "type": "oneInN",
-        "n": "10TDe"
-      },
-      "source": "Heavenly Rune",
-      "tags": [
-        "x2.5b Tier Luck",
-        "x0.1 Tier Bulk",
-        "x0.03 Rune Luck",
-        "+80k Rune Bulk"
-      ]
-    }
+  {
+    "id": "ascended",
+    "name": "Ascended",
+    "chance": {
+      "type": "oneInN",
+      "n": "350DDe"
+    },
+    "source": "Heavenly Rune",
+    "tags": [
+      "x350 Glory",
+      "x13.5 Divinity",
+      "x5 Heaven Points",
+      "x0.01 Rune Luck"
+    ]
+  },
+  {
+    "id": "absolute_divinity",
+    "name": "Absolute Divinity",
+    "chance": {
+      "type": "oneInN",
+      "n": "10TDe"
+    },
+    "source": "Heavenly Rune",
+    "tags": [
+      "x2.5b Tier Luck",
+      "x0.1 Tier Bulk",
+      "x0.03 Rune Luck",
+      "+80k Rune Bulk"
+    ]
+  }
 ]
