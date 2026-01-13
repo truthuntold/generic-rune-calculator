@@ -1,5 +1,5 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, beforeEach } from 'vitest';
 import { GenericRunePanel } from './GenericRunePanel';
 
 export type RpsMode = 'raw' | 'derived';
@@ -48,6 +48,10 @@ const derivedConfig: GameConfig = {
 };
 
 describe('GenericRunePanel', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
   it('renders raw inputs correctly', () => {
     render(<GenericRunePanel runes={runes} scales={scales} config={rawConfig} />);
     expect(screen.getByLabelText('RPS')).toBeInTheDocument();
@@ -100,6 +104,38 @@ describe('GenericRunePanel', () => {
     fireEvent.change(speedInput, { target: { value: '3' } });
     fireEvent.change(bulkInput, { target: { value: '5' } });
     expect(screen.getByText('7s')).toBeInTheDocument(); // 100 / (3 * 5)
+  });
+
+  it('restores luck from localStorage on next visit', () => {
+    localStorage.setItem(`grc:v1:${rawConfig.displayName}:raw:luck`, '2');
+    render(<GenericRunePanel runes={runes} scales={scales} config={rawConfig} />);
+    expect((screen.getByLabelText('Luck') as HTMLInputElement).value).toBe('2');
+  });
+
+  it('restores Custom Calc and filter toggles from localStorage on next visit', () => {
+    localStorage.setItem(`grc:v1:${rawConfig.displayName}:raw:customChance`, '1e10');
+    localStorage.setItem(`grc:v1:${rawConfig.displayName}:raw:showUnder1Hour`, 'true');
+    localStorage.setItem(`grc:v1:${rawConfig.displayName}:raw:hideInstant`, 'true');
+    localStorage.setItem(`grc:v1:${rawConfig.displayName}:raw:showSecretsOnly`, 'true');
+
+    render(<GenericRunePanel runes={runes} scales={scales} config={rawConfig} />);
+
+    expect((screen.getByPlaceholderText('Enter value...') as HTMLInputElement).value).toBe('1e10');
+    expect((screen.getByLabelText('Under 1 hour') as HTMLInputElement).checked).toBe(true);
+    expect((screen.getByLabelText('Hide Instant') as HTMLInputElement).checked).toBe(true);
+    expect((screen.getByLabelText('Secrets only') as HTMLInputElement).checked).toBe(true);
+  });
+
+  it('shows a changelog footer but does not auto-open on first visit', () => {
+    render(<GenericRunePanel runes={runes} scales={scales} config={rawConfig} />);
+    expect(screen.getByRole('button', { name: /changelog \(v/i })).toBeInTheDocument();
+    expect(screen.queryByText("What’s new")).not.toBeInTheDocument();
+  });
+
+  it('auto-opens changelog when version changes', () => {
+    localStorage.setItem('grc:v1:lastSeenVersion', 'some-old-version');
+    render(<GenericRunePanel runes={runes} scales={scales} config={rawConfig} />);
+    expect(screen.getByText("What’s new")).toBeInTheDocument();
   });
 
   it('matches snapshot', () => {

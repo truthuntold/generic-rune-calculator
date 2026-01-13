@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Search,
@@ -15,6 +15,8 @@ import {
 } from "lucide-react";
 import { effectiveBaseRps, etaSeconds, oneInNToNumber, shouldApplyLuck } from "../core/engine";
 import { formatScaled, formatTimeHuman, parseScaled } from "../core/scales";
+import { useLocalStorageBooleanState, useLocalStorageStringState } from "./useLocalStorageStringState";
+import { ChangelogDialog } from "./ChangelogDialog";
 
 export type RpsMode = 'raw' | 'derived';
 
@@ -48,17 +50,20 @@ interface GenericRunePanelProps {
 
 export function GenericRunePanel({ runes, scales, config }: GenericRunePanelProps) {
   const [rps, setRps] = useState(config.defaults?.rps || '');
-  const [speed, setSpeed] = useState(config.defaults?.speed || '');
-  const [bulk, setBulk] = useState(config.defaults?.bulk || '');
-  const [luck, setLuck] = useState(config.defaults?.luck || '1');
+
+  const storageScope = `grc:v1:${config.displayName ?? 'default'}:${config.rpsMode}`;
+
+  const [speed, setSpeed] = useLocalStorageStringState(`${storageScope}:speed`, config.defaults?.speed || '');
+  const [bulk, setBulk] = useLocalStorageStringState(`${storageScope}:bulk`, config.defaults?.bulk || '');
+  const [luck, setLuck] = useLocalStorageStringState(`${storageScope}:luck`, config.defaults?.luck || '1');
   const [filter, setFilter] = useState('');
-  const [showUnder1Hour, setShowUnder1Hour] = useState(false);
-  const [hideInstant, setHideInstant] = useState(false);
-  const [showSecretsOnly, setShowSecretsOnly] = useState(false);
+  const [showUnder1Hour, setShowUnder1Hour] = useLocalStorageBooleanState(`${storageScope}:showUnder1Hour`, false);
+  const [hideInstant, setHideInstant] = useLocalStorageBooleanState(`${storageScope}:hideInstant`, false);
+  const [showSecretsOnly, setShowSecretsOnly] = useLocalStorageBooleanState(`${storageScope}:showSecretsOnly`, false);
   const [sortField, setSortField] = useState<string>('chance');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [customChance, setCustomChance] = useState('');
+  const [customChance, setCustomChance] = useLocalStorageStringState(`${storageScope}:customChance`, '');
 
   const baseRps = effectiveBaseRps({ rps, speed, bulk }, config.rpsMode, scales, config.speedInput);
   const luckValue = parseScaled(luck, scales).value;
@@ -488,6 +493,10 @@ export function GenericRunePanel({ runes, scales, config }: GenericRunePanelProp
           </section>
         </div>
       </main>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ChangelogDialog />
+      </div>
     </div>
   );
 }
