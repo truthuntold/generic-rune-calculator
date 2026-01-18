@@ -1796,5 +1796,36 @@
       "x200 Light Points",
       "x1k Cosmic Points"
     ]
+  },
+  {
+    "id": "the_secret_garden",
+    "name": "The Secret Garden",
+    "chance": {
+      "type": "oneInN",
+      "n": "5TDe"
+    },
+    "source": "Basic Rune",
+    "tags": [
+      "+50k Rune Bulk",
+      "x0.02 Rune Luck",
+      "+1M Tier Bulk",
+      "x0.001 Tickets"
+    ]
+  },
+  {
+    "id": "cybernetic_secrets",
+    "name": "Cybernetic Secrets",
+    "chance": {
+      "type": "oneInN",
+      "n": "2.5TDe"
+    },
+    "source": "Energy Rune",
+    "tags": [
+      "x0.01 Rune Luck",
+      "+20k Rune Bulk",
+      "x0.05 Tier Bulk",
+      "x10Sp Cores"
+    ]
   }
+  
 ]
