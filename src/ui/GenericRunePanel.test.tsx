@@ -97,6 +97,32 @@ describe('GenericRunePanel', () => {
     expect(screen.getByText('5s')).toBeInTheDocument(); // 100 / (10 * 2)
   });
 
+  it('applies Rune Speed potion (2×) correctly', () => {
+    render(<GenericRunePanel runes={runes} scales={scales} config={rawConfig} />);
+    // baseline: 100 / 10 = 10s
+    expect(screen.getByText('10s')).toBeInTheDocument();
+
+    const speedPotionToggle = screen.getByLabelText('Rune Speed (2×)') as HTMLInputElement;
+    fireEvent.click(speedPotionToggle);
+    expect(speedPotionToggle.checked).toBe(true);
+
+    // potion: effective RPS doubles => ETA halves
+    expect(screen.getByText('5s')).toBeInTheDocument();
+  });
+
+  it('applies Rune Luck potion (2×) correctly', () => {
+    render(<GenericRunePanel runes={runes} scales={scales} config={rawConfig} />);
+    // baseline: 100 / 10 = 10s at luck=1
+    expect(screen.getByText('10s')).toBeInTheDocument();
+
+    const luckPotionToggle = screen.getByLabelText('Rune Luck (2×)') as HTMLInputElement;
+    fireEvent.click(luckPotionToggle);
+    expect(luckPotionToggle.checked).toBe(true);
+
+    // potion: effective luck doubles => ETA halves (for runes where luck applies)
+    expect(screen.getByText('5s')).toBeInTheDocument();
+  });
+
   it('calculates derived RPS correctly', () => {
     render(<GenericRunePanel runes={runes} scales={scales} config={derivedConfig} />);
     const speedInput = screen.getByLabelText('Speed');

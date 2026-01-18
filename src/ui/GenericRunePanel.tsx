@@ -60,13 +60,18 @@ export function GenericRunePanel({ runes, scales, config }: GenericRunePanelProp
   const [showUnder1Hour, setShowUnder1Hour] = useLocalStorageBooleanState(`${storageScope}:showUnder1Hour`, false);
   const [hideInstant, setHideInstant] = useLocalStorageBooleanState(`${storageScope}:hideInstant`, false);
   const [showSecretsOnly, setShowSecretsOnly] = useLocalStorageBooleanState(`${storageScope}:showSecretsOnly`, false);
+  const [runeLuckPotion, setRuneLuckPotion] = useLocalStorageBooleanState(`${storageScope}:runeLuckPotion`, false);
+  const [runeSpeedPotion, setRuneSpeedPotion] = useLocalStorageBooleanState(`${storageScope}:runeSpeedPotion`, false);
   const [sortField, setSortField] = useState<string>('chance');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [customChance, setCustomChance] = useLocalStorageStringState(`${storageScope}:customChance`, '');
 
-  const baseRps = effectiveBaseRps({ rps, speed, bulk }, config.rpsMode, scales, config.speedInput);
-  const luckValue = parseScaled(luck, scales).value;
+  const baseRpsRaw = effectiveBaseRps({ rps, speed, bulk }, config.rpsMode, scales, config.speedInput);
+  const baseRps = baseRpsRaw * (runeSpeedPotion ? 2 : 1);
+
+  const luckValueRaw = parseScaled(luck, scales).value;
+  const luckValue = luckValueRaw * (runeLuckPotion ? 2 : 1);
 
   const customChanceData = useMemo(() => {
     if (!customChance) return null;
@@ -117,7 +122,23 @@ export function GenericRunePanel({ runes, scales, config }: GenericRunePanelProp
         }
         return sortOrder === 'asc' ? comparison : -comparison;
       });
-  }, [runes, scales, config, rps, speed, bulk, luck, filter, showUnder1Hour, hideInstant, showSecretsOnly, sortField, sortOrder]);
+  }, [
+    runes,
+    scales,
+    config,
+    rps,
+    speed,
+    bulk,
+    luck,
+    runeLuckPotion,
+    runeSpeedPotion,
+    filter,
+    showUnder1Hour,
+    hideInstant,
+    showSecretsOnly,
+    sortField,
+    sortOrder
+  ]);
 
   const getEtaColor = (eta: number) => {
     if (eta < 1) return 'text-emerald-400';
@@ -153,16 +174,56 @@ export function GenericRunePanel({ runes, scales, config }: GenericRunePanelProp
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="glass-panel p-6 flex items-center gap-6"
+              className="glass-panel p-6 flex items-center gap-6 w-full md:w-[360px] md:flex-none"
             >
               <div className="bg-brand-500/10 p-3 rounded-xl">
                 <Zap className="w-8 h-8 text-brand-400" />
               </div>
-              <div>
-                <p className="text-sm font-medium text-slate-400 uppercase tracking-wider">Effective RPS</p>
-                <p className="text-3xl font-mono font-bold text-white">
-                  {formatScaled(baseRps, scales)}
-                </p>
+              <div className="min-w-0 flex-1 grid grid-cols-[1fr_auto] gap-4 items-start">
+                {/* Left column: RPS values */}
+                <div className="min-w-0">
+                  <p className="text-sm font-medium text-slate-400 uppercase tracking-wider">Effective RPS</p>
+                  <p className="text-3xl font-mono font-bold text-white">
+                    {formatScaled(baseRps, scales)}
+                  </p>
+                  {/* Reserve space so toggling potions doesn't shift layout */}
+                  <div className="h-4 text-xs text-slate-500 mt-2">
+                    {(runeSpeedPotion || runeLuckPotion) && (
+                      <>
+                        Base: <span className="font-mono">{formatScaled(baseRpsRaw, scales)}</span>
+                      </>
+                    )}
+                  </div>
+                </div>
+
+                {/* Right column: stacked potion pills (no scrolling) */}
+                <div className="w-[140px] min-h-[52px] flex flex-col gap-2">
+                  {runeSpeedPotion && (
+                    <button
+                      type="button"
+                      onClick={() => setRuneSpeedPotion(false)}
+                      aria-label="Disable Rune Speed potion"
+                      title="Disable Rune Speed potion"
+                      className="w-full inline-flex items-center justify-between px-3 py-1 rounded-full bg-sky-500/15 border border-sky-400/30 text-sky-200 text-[11px] font-semibold tracking-wide hover:bg-sky-500/25 hover:border-sky-300/50 transition-colors"
+                    >
+                      <span>Speed ×2</span>
+                      <span className="text-sky-100/90 font-bold" aria-hidden="true">×</span>
+                    </button>
+                  )}
+
+                  {runeLuckPotion && (
+                    <button
+                      type="button"
+                      onClick={() => setRuneLuckPotion(false)}
+                      aria-label="Disable Rune Luck potion"
+                      title="Disable Rune Luck potion"
+                      className="w-full inline-flex items-center justify-between px-3 py-1 rounded-full bg-fuchsia-500/15 border border-fuchsia-400/30 text-fuchsia-200 text-[11px] font-semibold tracking-wide hover:bg-fuchsia-500/25 hover:border-fuchsia-300/50 transition-colors"
+                    >
+                      <span>Luck ×2</span>
+                      <span className="text-fuchsia-100/90 font-bold" aria-hidden="true">×</span>
+                    </button>
+                  )}
+                </div>
               </div>
             </motion.div>
           </div>
@@ -271,9 +332,43 @@ export function GenericRunePanel({ runes, scales, config }: GenericRunePanelProp
               </div>
 
               <div className="pt-6 border-t border-slate-800 space-y-4">
-                <h3 className="text-sm font-bold text-slate-500 uppercase tracking-widest">Filters</h3>
+                <h3 className="text-sm font-bold text-slate-500 uppercase tracking-widest">Display options</h3>
 
                 <div className="space-y-3">
+                  <label htmlFor="runeLuckPotion" className="flex items-center gap-3 cursor-pointer group">
+                    <div className="relative flex items-center">
+                      <input
+                        type="checkbox"
+                        id="runeLuckPotion"
+                        checked={runeLuckPotion}
+                        onChange={e => setRuneLuckPotion(e.target.checked)}
+                        className="peer sr-only"
+                      />
+                      <div className="w-10 h-6 bg-slate-700 rounded-full peer peer-checked:bg-brand-600 transition-colors"></div>
+                      <div className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform peer-checked:translate-x-4"></div>
+                    </div>
+                    <span className="text-sm font-medium text-slate-300 group-hover:text-white transition-colors">
+                      Rune Luck (2×)
+                    </span>
+                  </label>
+
+                  <label htmlFor="runeSpeedPotion" className="flex items-center gap-3 cursor-pointer group">
+                    <div className="relative flex items-center">
+                      <input
+                        type="checkbox"
+                        id="runeSpeedPotion"
+                        checked={runeSpeedPotion}
+                        onChange={e => setRuneSpeedPotion(e.target.checked)}
+                        className="peer sr-only"
+                      />
+                      <div className="w-10 h-6 bg-slate-700 rounded-full peer peer-checked:bg-brand-600 transition-colors"></div>
+                      <div className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform peer-checked:translate-x-4"></div>
+                    </div>
+                    <span className="text-sm font-medium text-slate-300 group-hover:text-white transition-colors">
+                      Rune Speed (2×)
+                    </span>
+                  </label>
+
                   <label htmlFor="showUnder1Hour" className="flex items-center gap-3 cursor-pointer group">
                     <div className="relative flex items-center">
                       <input
@@ -483,6 +578,8 @@ export function GenericRunePanel({ runes, scales, config }: GenericRunePanelProp
                     setShowUnder1Hour(false);
                     setHideInstant(false);
                     setShowSecretsOnly(false);
+                    setRuneLuckPotion(false);
+                    setRuneSpeedPotion(false);
                   }}
                   className="mt-8 btn-primary"
                 >

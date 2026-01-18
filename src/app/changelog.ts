@@ -10,6 +10,13 @@ export interface ChangelogEntry {
  */
 export const CHANGELOG: ChangelogEntry[] = [
     {
+        version: '1.0.1',
+        changes: [
+            'Added Rune Luck and Rune Speed potion toggles (each gives 2×).',
+            'Added new secret runes in Energy and Basic.',
+        ],
+    },
+    {
         version: '1.0.0',
         changes: [
             'Your settings now persist between visits (Speed/Bulk/Luck, Custom Calc, and filters).',
