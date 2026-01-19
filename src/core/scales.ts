@@ -38,7 +38,7 @@ export function formatScaled(n: number, scales: Record<string, number>): string 
   if (!isFinite(n)) return "Infinity";
 
   const absN = Math.abs(n);
-  
+
   // Find the largest scale that is less than or equal to absN
   const candidateSuffixes = Object.entries(scales)
     .filter(([suffix, value]) => suffix && value <= absN)
@@ -61,6 +61,12 @@ export function formatScaled(n: number, scales: Record<string, number>): string 
 
 export function formatTimeHuman(seconds: number): string {
   if (seconds < 60) return `${Math.round(seconds)}s`;
+  if (seconds < 300) {
+    const totalSeconds = Math.round(seconds);
+    const mins = Math.floor(totalSeconds / 60);
+    const secs = totalSeconds % 60;
+    return `${mins}m ${secs}s`;
+  }
   if (seconds < 3600) return `${Math.round(seconds / 60)}m`;
   if (seconds < 86400) return `${Math.round(seconds / 3600)}h`;
   return `${Math.round(seconds / 86400)}d`;

@@ -54,8 +54,12 @@ describe('formatTimeHuman', () => {
     expect(formatTimeHuman(30)).toBe('30s');
   });
 
-  it('should format minutes', () => {
-    expect(formatTimeHuman(150)).toBe('3m');
+  it('should format minutes with seconds if under 5m', () => {
+    expect(formatTimeHuman(150)).toBe('2m 30s');
+  });
+
+  it('should format minutes without seconds if over 5m', () => {
+    expect(formatTimeHuman(330)).toBe('6m');
   });
 
   it('should format hours', () => {
