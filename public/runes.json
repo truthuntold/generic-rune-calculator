@@ -1826,6 +1826,115 @@
       "x0.05 Tier Bulk",
       "x10Sp Cores"
     ]
+  },
+  {
+    "id": "ashbound",
+    "name": "Ashbound",
+    "chance": {
+      "type": "oneInN",
+      "n": "1"
+    },
+    "source": "Damnation Rune",
+    "tags": []
+  },
+  {
+    "id": "sootmarked",
+    "name": "Sootmarked",
+    "chance": {
+      "type": "oneInN",
+      "n": "10M"
+    },
+    "source": "Damnation Rune",
+    "tags": []
+  },
+  {
+    "id": "cinderbrand",
+    "name": "Cinderbrand",
+    "chance": {
+      "type": "oneInN",
+      "n": "100T"
+    },
+    "source": "Damnation Rune",
+    "tags": []
+  },
+  {
+    "id": "pitforged",
+    "name": "Pitforged",
+    "chance": {
+      "type": "oneInN",
+      "n": "1Sx"
+    },
+    "source": "Damnation Rune",
+    "tags": []
+  },
+  {
+    "id": "sinwrought",
+    "name": "Sinwrought",
+    "chance": {
+      "type": "oneInN",
+      "n": "1TDe"
+    },
+    "source": "Damnation Rune",
+    "tags": []
+  },
+  {
+    "id": "bloodcrowned",
+    "name": "Bloodcrowned",
+    "chance": {
+      "type": "oneInN",
+      "n": "15TDe"
+    },
+    "source": "Damnation Rune",
+    "tags": []
+  },
+  {
+    "id": "netherbound",
+    "name": "Netherbound",
+    "chance": {
+      "type": "oneInN",
+      "n": "225TDe"
+    },
+    "source": "Damnation Rune",
+    "tags": []
+  },
+  {
+    "id": "hell_anointed",
+    "name": "Hell Anointed",
+    "chance": {
+      "type": "oneInN",
+      "n": "3.5QdDe"
+    },
+    "source": "Damnation Rune",
+    "tags": []
+  },
+  {
+    "id": "doom_sovereign",
+    "name": "Doom Sovereign",
+    "chance": {
+      "type": "oneInN",
+      "n": "55QdDe"
+    },
+    "source": "Damnation Rune",
+    "tags": []
+  },
+  {
+    "id": "archfiend_ascended",
+    "name": "Archfiend Ascended",
+    "chance": {
+      "type": "oneInN",
+      "n": "750QdDe"
+    },
+    "source": "Damnation Rune",
+    "tags": []
+  },
+  {
+    "id": "cataclysm_unbound",
+    "name": "Cataclysm Unbound",
+    "chance": {
+      "type": "oneInN",
+      "n": "20QnDe"
+    },
+    "source": "Damnation Rune",
+    "tags": []
   }
-  
 ]
