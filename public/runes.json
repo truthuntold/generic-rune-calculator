@@ -2006,5 +2006,65 @@
     },
     "source": "Galaxy Rune",
     "tags": []
+  },
+  {
+    "id": "moonlight",
+    "name": "Moonlight",
+    "chance": {
+      "type": "oneInN",
+      "n": "1"
+    },
+    "source": "Galaxy Rune",
+    "tags": []
+  },
+  {
+    "id": "midnight_star",
+    "name": "Midnight Star",
+    "chance": {
+      "type": "oneInN",
+      "n": "100B"
+    },
+    "source": "Galaxy Rune",
+    "tags": []
+  },
+  {
+    "id": "starstrike",
+    "name": "Starstrike",
+    "chance": {
+      "type": "oneInN",
+      "n": "10Sx"
+    },
+    "source": "Galaxy Rune",
+    "tags": []
+  },
+  {
+    "id": "alien_invasion",
+    "name": "Alien Invasion",
+    "chance": {
+      "type": "oneInN",
+      "n": "750TDe"
+    },
+    "source": "Galaxy Rune",
+    "tags": []
+  },
+  {
+    "id": "solar_flare",
+    "name": "Solar Flare",
+    "chance": {
+      "type": "oneInN",
+      "n": "5QdDe"
+    },
+    "source": "Galaxy Rune",
+    "tags": []
+  },
+  {
+    "id": "interstellar",
+    "name": "Interstellar",
+    "chance": {
+      "type": "oneInN",
+      "n": "30QdDe"
+    },
+    "source": "Galaxy Rune",
+    "tags": []
   }
 ]
