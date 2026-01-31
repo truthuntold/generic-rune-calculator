@@ -1936,5 +1936,85 @@
     },
     "source": "Damnation Rune",
     "tags": []
+  },
+  {
+    "id": "cataclysm_unbound",
+    "name": "Cataclysm Unbound",
+    "chance": {
+      "type": "oneInN",
+      "n": "20QnDe"
+    },
+    "source": "Damnation Rune",
+    "tags": []
+  },
+  {
+    "id": "unknown_otherworldly",
+    "name": "Unknown Otherworldly",
+    "chance": {
+      "type": "oneInN",
+      "n": "35QnDe"
+    },
+    "source": "Galaxy Rune",
+    "tags": []
+  },
+  {
+    "id": "the_secret_sea",
+    "name": "The Secret Sea",
+    "chance": {
+      "type": "oneInN",
+      "n": "2QnDe"
+    },
+    "source": "Waves Rune",
+    "tags": []
+  },
+  {
+    "id": "secret_element",
+    "name": "Secret Element",
+    "chance": {
+      "type": "oneInN",
+      "n": "1.5QnDe"
+    },
+    "source": "Lantern Rune",
+    "tags": []
+  },
+  {
+    "id": "secret_depths",
+    "name": "Secret Depths",
+    "chance": {
+      "type": "oneInN",
+      "n": "250QdDe"
+    },
+    "source": "Cavern Rune",
+    "tags": []
+  },
+  {
+    "id": "secret_gateway",
+    "name": "Secret Gateway",
+    "chance": {
+      "type": "oneInN",
+      "n": "35QdDe"
+    },
+    "source": "Tunnel Rune",
+    "tags": []
+  },
+  {
+    "id": "destruction",
+    "name": "Destruction",
+    "chance": {
+      "type": "oneInN",
+      "n": "1.5QnDe"
+    },
+    "source": "Galaxy Rune",
+    "tags": []
+  },
+  {
+    "id": "creation",
+    "name": "Creation",
+    "chance": {
+      "type": "oneInN",
+      "n": "1.5QnDe"
+    },
+    "source": "Galaxy Rune",
+    "tags": []
   }
 ]
