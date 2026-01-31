@@ -1938,16 +1938,6 @@
     "tags": []
   },
   {
-    "id": "cataclysm_unbound",
-    "name": "Cataclysm Unbound",
-    "chance": {
-      "type": "oneInN",
-      "n": "20QnDe"
-    },
-    "source": "Damnation Rune",
-    "tags": []
-  },
-  {
     "id": "unknown_otherworldly",
     "name": "Unknown Otherworldly",
     "chance": {
