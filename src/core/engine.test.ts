@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { oneInNToNumber, effectiveBaseRps, shouldApplyLuck, etaSeconds } from './engine';
+import { oneInNToNumber, effectiveBaseRps, shouldApplyLuck, etaSeconds, calculateProbability } from './engine';
 
 export type RpsMode = 'raw' | 'derived';
 
@@ -82,17 +82,31 @@ describe('shouldApplyLuck', () => {
   });
 });
 
+describe('calculateProbability', () => {
+  it('should calculate probability correctly without luck', () => {
+    // 1/1000 chance, total weight 1 (placeholder for isolated calculation), luck 2 (ignored), appliesLuck false
+    // Weight = 0.001. Prob = 0.001 / 1 = 0.001
+    expect(calculateProbability(1000, 1, 2, false)).toBe(0.001);
+  });
+
+  it('should calculate probability correctly with luck', () => {
+    // 1/1000 chance, total weight 1, luck 2, appliesLuck true
+    // BaseWeight = 0.001. EffectiveWeight = 0.002. Prob = 0.002 / 1 = 0.002
+    expect(calculateProbability(1000, 1, 2, true)).toBe(0.002);
+  });
+});
+
 describe('etaSeconds', () => {
-  it('should calculate ETA without luck', () => {
-    expect(etaSeconds(1000, 100, 2, false)).toBe(10);
+  it('should calculate ETA from probability and RPS', () => {
+    // Prob 0.1, RPS 1 -> 1 / 0.1 = 10s
+    expect(etaSeconds(0.1, 1)).toBe(10);
+    // Prob 0.01, RPS 100 -> 1 / 1 = 1s
+    expect(etaSeconds(0.01, 100)).toBe(1);
   });
 
-  it('should calculate ETA with luck', () => {
-    expect(etaSeconds(1000, 100, 2, true)).toBe(5);
-  });
-
-  it('should return Infinity for non-positive RPS', () => {
-    expect(etaSeconds(1000, 0, 2, true)).toBe(Infinity);
-    expect(etaSeconds(1000, -10, 2, true)).toBe(Infinity);
+  it('should return Infinity for non-positive RPS or Probability', () => {
+    expect(etaSeconds(0.1, 0)).toBe(Infinity);
+    expect(etaSeconds(0, 10)).toBe(Infinity);
+    expect(etaSeconds(0.1, -10)).toBe(Infinity);
   });
 });
