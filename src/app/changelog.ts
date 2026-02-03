@@ -13,7 +13,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         version: '1.0.2',
         changes: [
             'Implemented weighted probability system for ETA calculations',
-            'Added color to the rune cards to know at a glance where it comes from.',
+            'Added color to the rune cards to know at a glance where it comes from. ',
         ],
     },
     {
