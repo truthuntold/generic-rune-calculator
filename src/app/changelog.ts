@@ -10,6 +10,13 @@ export interface ChangelogEntry {
  */
 export const CHANGELOG: ChangelogEntry[] = [
     {
+        version: '1.0.2',
+        changes: [
+            'Implemented weighted probability system for ETA calculations',
+            'Added color to the rune cards to know at a glance where it comes from.',
+        ],
+    },
+    {
         version: '1.0.1',
         changes: [
             'Added Rune Luck and Rune Speed potion toggles (each gives 2×).',
