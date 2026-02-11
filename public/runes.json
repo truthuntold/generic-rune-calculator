@@ -1660,6 +1660,16 @@
     ]
   },
   {
+    "id": "astral_divinity",
+    "name": "Astral Divinity",
+    "chance": {
+      "type": "oneInN",
+      "n": "350QnDe"
+    },
+    "source": "Heavenly Rune",
+    "tags": []
+  },
+  {
     "id": "wormhole",
     "name": "Wormhole",
     "chance": {
