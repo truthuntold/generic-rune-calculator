@@ -1222,6 +1222,16 @@
     ]
   },
   {
+    "id": "midnight_bloom",
+    "name": "Midnight Bloom",
+    "chance": {
+      "type": "oneInN",
+      "n": "20SxDe"
+    },
+    "source": "Capstone Rune",
+    "tags": []
+  },
+  {
     "id": "dustfall",
     "name": "Dustfall",
     "chance": {
