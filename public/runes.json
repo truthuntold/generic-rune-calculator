@@ -1508,6 +1508,16 @@
     ]
   },
   {
+    "id": "corrupted_ice",
+    "name": "Corrupted Ice",
+    "chance": {
+      "type": "oneInN",
+      "n": "150SxDe"
+    },
+    "source": "Frost Rune",
+    "tags": []
+  },
+  {
     "id": "the_deepest_sea",
     "name": "The Deepest Sea",
     "chance": {
