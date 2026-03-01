@@ -2096,5 +2096,85 @@
     },
     "source": "Galaxy Rune",
     "tags": []
+  },
+  {
+    "id": "apple",
+    "name": "Apple",
+    "chance": {
+      "type": "oneInN",
+      "n": "1"
+    },
+    "source": "Aetheris",
+    "tags": []
+  },
+  {
+    "id": "banana",
+    "name": "Banana",
+    "chance": {
+      "type": "oneInN",
+      "n": "3T"
+    },
+    "source": "Aetheris",
+    "tags": []
+  },
+  {
+    "id": "lemon",
+    "name": "Lemon",
+    "chance": {
+      "type": "oneInN",
+      "n": "10Sp"
+    },
+    "source": "Aetheris",
+    "tags": []
+  },
+  {
+    "id": "avocado",
+    "name": "Avocado",
+    "chance": {
+      "type": "oneInN",
+      "n": "5SxDe"
+    },
+    "source": "Aetheris",
+    "tags": []
+  },
+  {
+    "id": "blueberry",
+    "name": "Blueberry",
+    "chance": {
+      "type": "oneInN",
+      "n": "25SxDe"
+    },
+    "source": "Aetheris",
+    "tags": []
+  },
+  {
+    "id": "blue_carrot",
+    "name": "Blue Carrot",
+    "chance": {
+      "type": "oneInN",
+      "n": "125SxDe"
+    },
+    "source": "Aetheris",
+    "tags": []
+  },
+  {
+    "id": "plums",
+    "name": "Plums",
+    "chance": {
+      "type": "oneInN",
+      "n": "625SxDe"
+    },
+    "source": "Aetheris",
+    "tags": []
+  },
+  {
+    "id": "albino_strawberry",
+    "name": "Albino Strawberry",
+    "chance": {
+      "type": "oneInN",
+      "n": "5SpDe"
+    },
+    "source": "Aetheris",
+    "tags": []
   }
 ]
