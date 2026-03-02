@@ -47,7 +47,11 @@ const RUNE_SOURCE_COLORS: Record<string, string> = {
   "Energy": "#FED15C",
   "Waves": "#0000EA",
   "Capstone": "#FD0C7D",
-  "Astryx": "#A917FC"
+  "Astryx": "#A917FC",
+
+  // Group 4
+  "Nythera": "#4338CA",
+  "Aetheris": "#2DD4BF"
 };
 
 // Colors specifically optimized for text readability on dark backgrounds
@@ -55,8 +59,10 @@ const RUNE_SOURCE_TEXT_COLORS: Record<string, string> = {
   "Galaxy": "#C4B5FD", // Much lighter purple (violet-300)
   "Waves": "#93C5FD",  // Much lighter blue (blue-300)
   "Lantern": "#FCA5A5", // Lighter red for text readability
-  "Damnnation": "#FDA4AF", // Lighter rose
+  "Damnation": "#FDA4AF", // Lighter rose
   "Energy": "#FDBA74", // Lighter orange
+  "Nythera": "#818CF8",  // Lighter indigo for readability
+  "Aetheris": "#5EEAD4", // Lighter teal
 };
 
 const getSourceColor = (sourceName?: string): { base: string, text: string } => {
