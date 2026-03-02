@@ -2176,5 +2176,95 @@
     },
     "source": "Aetheris",
     "tags": []
+  },
+  {
+    "id": "dirt",
+    "name": "Dirt",
+    "chance": {
+      "type": "oneInN",
+      "n": "1"
+    },
+    "source": "Nythera",
+    "tags": []
+  },
+  {
+    "id": "water",
+    "name": "Water",
+    "chance": {
+      "type": "oneInN",
+      "n": "1B"
+    },
+    "source": "Nythera",
+    "tags": []
+  },
+  {
+    "id": "flower",
+    "name": "Flower",
+    "chance": {
+      "type": "oneInN",
+      "n": "1Qn"
+    },
+    "source": "Nythera",
+    "tags": []
+  },
+  {
+    "id": "black_sand",
+    "name": "Black Sand",
+    "chance": {
+      "type": "oneInN",
+      "n": "1Oc"
+    },
+    "source": "Nythera",
+    "tags": []
+  },
+  {
+    "id": "sunny",
+    "name": "Sunny",
+    "chance": {
+      "type": "oneInN",
+      "n": "20SxDe"
+    },
+    "source": "Nythera",
+    "tags": []
+  },
+  {
+    "id": "cloudy",
+    "name": "Cloudy",
+    "chance": {
+      "type": "oneInN",
+      "n": "150SxDe"
+    },
+    "source": "Nythera",
+    "tags": []
+  },
+  {
+    "id": "potting_soil",
+    "name": "Potting Soil",
+    "chance": {
+      "type": "oneInN",
+      "n": "1.25SpDe"
+    },
+    "source": "Nythera",
+    "tags": []
+  },
+  {
+    "id": "fall",
+    "name": "Fall",
+    "chance": {
+      "type": "oneInN",
+      "n": "10SpDe"
+    },
+    "source": "Nythera",
+    "tags": []
+  },
+  {
+    "id": "magical_garden",
+    "name": "Magical Garden",
+    "chance": {
+      "type": "oneInN",
+      "n": "200SpDe"
+    },
+    "source": "Nythera",
+    "tags": []
   }
 ]
