@@ -51,7 +51,8 @@ const RUNE_SOURCE_COLORS: Record<string, string> = {
 
   // Group 4
   "Nythera": "#4338CA",
-  "Aetheris": "#2DD4BF"
+  "Aetheris": "#ca00d1ff",
+  "Veydris": "#b91043ff"
 };
 
 // Colors specifically optimized for text readability on dark backgrounds
@@ -62,7 +63,8 @@ const RUNE_SOURCE_TEXT_COLORS: Record<string, string> = {
   "Damnation": "#FDA4AF", // Lighter rose
   "Energy": "#FDBA74", // Lighter orange
   "Nythera": "#818CF8",  // Lighter indigo for readability
-  "Aetheris": "#5EEAD4", // Lighter teal
+  "Aetheris": "#cf65d3ff", // Lighter teal
+  "Veydris": "#b64b6bff",  // Lighter emerald
 };
 
 const getSourceColor = (sourceName?: string): { base: string, text: string } => {

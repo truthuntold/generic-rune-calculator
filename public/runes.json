@@ -2266,5 +2266,105 @@
     },
     "source": "Nythera",
     "tags": []
+  },
+  {
+    "id": "planted",
+    "name": "Planted",
+    "chance": {
+      "type": "oneInN",
+      "n": "1"
+    },
+    "source": "Veydris",
+    "tags": []
+  },
+  {
+    "id": "pond",
+    "name": "Pond",
+    "chance": {
+      "type": "oneInN",
+      "n": "22.5B"
+    },
+    "source": "Veydris",
+    "tags": []
+  },
+  {
+    "id": "toxic_flower",
+    "name": "Toxic Flower",
+    "chance": {
+      "type": "oneInN",
+      "n": "450Qn"
+    },
+    "source": "Veydris",
+    "tags": []
+  },
+  {
+    "id": "honey",
+    "name": "Honey",
+    "chance": {
+      "type": "oneInN",
+      "n": "10No"
+    },
+    "source": "Veydris",
+    "tags": []
+  },
+  {
+    "id": "blossom",
+    "name": "Blossom",
+    "chance": {
+      "type": "oneInN",
+      "n": "10SpDe"
+    },
+    "source": "Veydris",
+    "tags": []
+  },
+  {
+    "id": "deadly_bush",
+    "name": "Deadly Bush",
+    "chance": {
+      "type": "oneInN",
+      "n": "45SpDe"
+    },
+    "source": "Veydris",
+    "tags": []
+  },
+  {
+    "id": "autumn_garden",
+    "name": "Autumn Garden",
+    "chance": {
+      "type": "oneInN",
+      "n": "225SpDe"
+    },
+    "source": "Veydris",
+    "tags": []
+  },
+  {
+    "id": "mystical_garden",
+    "name": "Mystical Garden",
+    "chance": {
+      "type": "oneInN",
+      "n": "1OcDe"
+    },
+    "source": "Veydris",
+    "tags": []
+  },
+  {
+    "id": "garden_relic",
+    "name": "Garden Relic",
+    "chance": {
+      "type": "oneInN",
+      "n": "50OcDe"
+    },
+    "source": "Veydris",
+    "tags": []
+  },
+  {
+    "id": "poisonous_wasp",
+    "name": "Poisonous Wasp",
+    "chance": {
+      "type": "oneInN",
+      "n": "250OcDe"
+    },
+    "source": "Veydris",
+    "tags": []
   }
 ]
