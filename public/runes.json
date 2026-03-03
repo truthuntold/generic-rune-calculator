@@ -2352,7 +2352,7 @@
     "name": "Garden Relic",
     "chance": {
       "type": "oneInN",
-      "n": "50OcDe"
+      "n": "5OcDe"
     },
     "source": "Veydris",
     "tags": []
@@ -2362,7 +2362,7 @@
     "name": "Poisonous Wasp",
     "chance": {
       "type": "oneInN",
-      "n": "250OcDe"
+      "n": "25OcDe"
     },
     "source": "Veydris",
     "tags": []
