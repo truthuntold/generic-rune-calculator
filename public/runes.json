@@ -381,6 +381,16 @@
     "tags": []
   },
   {
+    "id": "passive_god",
+    "name": "Passive God",
+    "chance": {
+      "type": "oneInN",
+      "n": "4OcDe"
+    },
+    "source": "Sun Rune",
+    "tags": []
+  },
+  {
     "id": "glimmer",
     "name": "Glimmer",
     "chance": {
@@ -1883,6 +1893,16 @@
     ]
   },
   {
+    "id": "the_unknown_garden",
+    "name": "The Unknown Garden",
+    "chance": {
+      "type": "oneInN",
+      "n": "5OcDe"
+    },
+    "source": "Basic Rune",
+    "tags": []
+  },
+  {
     "id": "cybernetic_secrets",
     "name": "Cybernetic Secrets",
     "chance": {
@@ -2413,6 +2433,16 @@
     "chance": {
       "type": "oneInN",
       "n": "25OcDe"
+    },
+    "source": "Veydris",
+    "tags": []
+  },
+  {
+    "id": "the_bee_hive",
+    "name": "The Bee Hive",
+    "chance": {
+      "type": "oneInN",
+      "n": "500OcDe"
     },
     "source": "Veydris",
     "tags": []
