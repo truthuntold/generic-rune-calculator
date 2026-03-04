@@ -371,6 +371,16 @@
     ]
   },
   {
+    "id": "desert_god",
+    "name": "Desert God",
+    "chance": {
+      "type": "oneInN",
+      "n": "25SpDe"
+    },
+    "source": "Sun Rune",
+    "tags": []
+  },
+  {
     "id": "glimmer",
     "name": "Glimmer",
     "chance": {
@@ -890,6 +900,16 @@
       "+25 Rune Bulk (+200 max)",
       "x0.15 Rune Luck (x0.75 max)"
     ]
+  },
+  {
+    "id": "error_404",
+    "name": "Error 404",
+    "chance": {
+      "type": "oneInN",
+      "n": "2.5OcDe"
+    },
+    "source": "Energy Rune",
+    "tags": []
   },
   {
     "id": "onion",
@@ -1508,6 +1528,16 @@
     ]
   },
   {
+    "id": "snowy_garden",
+    "name": "Snowy Garden",
+    "chance": {
+      "type": "oneInN",
+      "n": "5OcDe"
+    },
+    "source": "Frost Rune",
+    "tags": []
+  },
+  {
     "id": "corrupted_ice",
     "name": "Corrupted Ice",
     "chance": {
@@ -1546,6 +1576,16 @@
       "x500b Mythical Fish",
       "x0.001 Multi Fish (x2.5 max)"
     ]
+  },
+  {
+    "id": "the_unknown_sea",
+    "name": "The Unknown Sea",
+    "chance": {
+      "type": "oneInN",
+      "n": "2.5OcDe"
+    },
+    "source": "Waves Rune",
+    "tags": []
   },
   {
     "id": "faded",
@@ -2093,6 +2133,16 @@
     "chance": {
       "type": "oneInN",
       "n": "30QdDe"
+    },
+    "source": "Galaxy Rune",
+    "tags": []
+  },
+  {
+    "id": "forgotten_dimension",
+    "name": "Forgotten Dimension",
+    "chance": {
+      "type": "oneInN",
+      "n": "250OcDe"
     },
     "source": "Galaxy Rune",
     "tags": []
